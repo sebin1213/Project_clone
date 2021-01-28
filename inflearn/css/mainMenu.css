@@ -1,6 +1,12 @@
 @charset "UTF-8";
 
 /*** mainMenu.css ***/
+
+#mainBox{
+    margin:0 160px;
+    height:80px;
+}
+
 #logoBox{
     float:left;
 }
@@ -35,14 +41,9 @@
 .menu-right ul{
     float:right;
 }
-#knowledge{
-    padding-left: 10px;
+#knowledge a{
+    padding-left:10px;
     color:#616161;
-}
-
-#mainBox{
-    margin:0 11%;
-    height:80px;
 }
 
 #mainBox ul li a{
@@ -76,15 +77,6 @@
     border-radius: 3px;
     height:40px;
 }
-
-
-
-/*** 서브메뉴박스 ****/
-
-#subMenuBox{
-    visibility:visibility;
-}
-
 
 
 /** 헤더 고정 **/
