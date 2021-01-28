@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* index.css */
+
+/*********************Header**********************/
+
+#headerBox{
+    width:100%;
+    height:80px;
+    line-height:80px;
+    padding:0;
+    background-color:#fff;
+    z-index:10;/*스크롤시 위에 오도록*/
+    border:solid 1px transparent;
+    box-shadow:0 3px 5px 0px #dbdbdb;
+}
+

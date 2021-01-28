@@ -5,7 +5,8 @@
 		<title>프로젝트 예제 : index 메인 페이지</title>
 		<link rel="stylesheet" type="text/css" href="css/common.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
-		<link rel="stylesheet" type="text/css" href="css/menu.css">
+		<link rel="stylesheet" type="text/css" href="css/mainMenu.css">
+		<link rel="stylesheet" type="text/css" href="css/subMenu.css">
 		<link rel="stylesheet" type="text/css" href="css/search.css">
 		<link rel="stylesheet" type="text/css" href="css/slideShow.css">
 		<link rel="stylesheet" type="text/css" href="css/login.css">
@@ -22,52 +23,52 @@
 	<body>
     	<div id="wrap">
         	<header>
-        		<div id="headerBox">
-	            	<div id="logoBox"><a href="index.html"><img src="image/logo.png" id="logoImg"></a></div>
-
-					<nav>
-						<div id="mainMenuBox">
-							<div class="menu-left">
-								<ul>
-									<li><a href="#">강의들<img src="image/tab1.png"></a></li>
-									<li><a href="#">로드맵</a></li>
-									<li><a href="#">커뮤니티<img src="image/tab1.png"></a></li>
-								</ul>
-							</div>
+				<nav>
+					<div id="headerBox">
+						<div id="mainBox">
+							<div id="logoBox"><a href="index.html"><img src="image/logo.png" id="logoImg"></a></div>
+							<div id="mainMenuBox">
+									<div class="menu-left">
+										<ul>
+											<li><a href="#" id="mainMenu1">강의들<img src="image/down-arrow-green.png"></a></li>
+											<li><a href="#" id="mainMenu2">로드맵</a></li>
+											<li><a href="#" id="mainMenu3">커뮤니티<img src="image/down-arrow-green.png"></a></li>
+										</ul>
+									</div>
+							</div> <!-- mainMenuBox 끝 -->
 							<div class="menu-right">
+								<input id="search_input" type="text" placeholder="Search">
 								<ul>
-									<input class="search_input" type="text" placeholder="Search">
-									<li><a href="#">지식공유참여</a></li>
-									<li><a href="#">로그인</a></li>
-									<li><a href="#">회원가입</a></li>
+									<li><a href="#" id="knowledge">지식공유참여</a></li>
+									<li><a href="#" id="login">로그인</a></li>
+									<li><a href="#" id="register">회원가입</a></li>
 								</ul>
 							</div>
-						</div> <!-- mainMenuBox 끝 -->
-						<div id="subMenuBox">
-							<div  class="subMenuItem"  id="subMenuItem1">
-								<ul>
-									 <li><a href="#">개발 * 프로그래밍</a></li>
-									 <li><a href="#">보안 * 네트워크</a></li>
-									 <li><a href="#">데이터 사이언스</a></li>
-									 <li><a href="#">크리에이티브</a></li>
-									 <li><a href="#">업무스킬</a></li>
-									 <li><a href="#">교양 * 학문</a></li>
-									 <li><a href="#">커리어</a></li>
-									 <li><a href="#">라이프</a></li>
-								</ul>
-							</div>
-							<div  class="subMenuItem"  id="subMenuItem2">
-								<ul>
-										<li><a href="#"><img src="image/tab1.png"> 묻고 답하기</a></li>
-										<li><a href="#"><img src="image/tab1.png"> 수강평 모아보기</a></li>
-										<li><a href="#"><img src="image/tab1.png"> 인프런 블로그</a></li>
-										<li><a href="#"><img src="image/tab1.png"> 강의 * 기능요청</a></li>
-								</ul>
-							</div>
-						</div> <!-- subMenuBox 끝 -->
-					</nav>
-
-				</div>
+						</div>
+					</div>
+					<div id="subMenuBox">
+									<div  class="subMenuItem"  id="subMenuItem1">
+										<ul>
+											 <li><a href="#">개발 * 프로그래밍</a></li>
+											 <li><a href="#">보안 * 네트워크</a></li>
+											 <li><a href="#">데이터 사이언스</a></li>
+											 <li><a href="#">크리에이티브</a></li>
+											 <li><a href="#">업무스킬</a></li>
+											 <li><a href="#">교양 * 학문</a></li>
+											 <li><a href="#">커리어</a></li>
+											 <li><a href="#">라이프</a></li>
+										</ul>
+									</div>
+									<div  class="subMenuItem"  id="subMenuItem2">
+										<ul>
+												<li><a href="#"><img src="image/tab1.png"> 묻고 답하기</a></li>
+												<li><a href="#"><img src="image/tab1.png"> 수강평 모아보기</a></li>
+												<li><a href="#"><img src="image/tab1.png"> 인프런 블로그</a></li>
+												<li><a href="#"><img src="image/tab1.png"> 강의 * 기능요청</a></li>
+										</ul>
+									</div>
+					</div> <!-- subMenuBox 끝 -->
+				</nav>
             </header>
 
             <section>
@@ -133,9 +134,161 @@
 						<button><img src="image/돋보기.png" style="width:25px; height:25px;"></button>
 					</div>
 				 </center>
+				<article id="readyContentBox">
+					<div id="readyTitle">
+						<h1>여기서 시작해 보세요! <span>Ready!</span><img src="image/nextBtn.png"></h1>
+						<p>이미 검증된 쉽고 친절한 입문 강의들!!</p>
+					</div>
+					<div id="prevNextButtonBox02">
+						<img id="prevBtn02" src="image/contentPrevBtn.png">
+						<img id="nextBtn02" src="image/contentNextBtn.png">
+					</div>
+					<div id="readyContent">
+						<div class="contents" id="ready01">
+							<div id="content01">
+								<img src="">
+								<p class="title">프로그래밍 시작하기 : 파이썬 입문 (Inflearn Original)</p>
+								<p class="name">인프런</p>
+								<div class="starPoint">
+									<img src="image/star.png">
+									<img src="image/star.png">
+									<img src="image/star.png">
+									<img src="image/star.png">
+									<img src="image/star.png">
+									<p>(251)</p>
+								</div>
+								<p class="price">₩55,000</p>
+							</div>
+							<div class="contentTag">
+								<p>+7800명</p>
+								<p>업데이트</p>
+							</div>
+						</div>
+						<div> <!-- Content 에 hover 됐을때 화면 -->
+							<div>
+								<p>프로그래밍 시작하기 : 파이썬 입문 (Inflearn Original)</p>
+								<p>이미 6000명 이상이 학습하고 만족한 최고의 프로그래밍 입문 강의. 인프런이 비전공자 위치에서 직접 기획하고
+									준비한 프로그래밍 입문 강의로, 프로그래밍을 전혀 접해보지 못한 사람부터 실제 활용 가능한 프로그래밍 능력까지
+									갈 수 있도록 도와주는 강의입니다.</p>
+							</div>
+							<div>
+								<p class="level"><img src="image/level">입문</p>
+								<p class="category"><img src="image/category">웹 개발, 프로그래밍 언어</p>
+								<p class="genre"><img src="image/genre">Python,딥러닝,데이터 분석</p>
+							</div>
+							<div>
+								<img src="image/cart.png" class="addCart">
+								<img src="image/heart.png" class="addHeart">
+								<img src="image/plus.png" class="plus">
+							</div>
+						</div>
+						<div class="contents" id="ready03">
+							<div id="content03">
+								<img src="">
+								<p class="title">비전공자를 위한 개발자 취업 올인원 가이드 [통합편]</p>
+								<p class="name">한정수</p>
+								<div class="starPoint">
+									<img src="image/star.png">
+									<img src="image/star.png">
+									<img src="image/star.png">
+									<img src="image/star.png">
+									<img src="image/star.png">
+									<p>(0)</p>
+								</div>
+								<p class="price"><span style="text-decoration:line-through">₩77,000</span>₩53,900</p>
+							</div>
+							<div class="contentTag">
+								<p>새강의</p>
+								<p>할인중</p>
+							</div>
+						</div>
+						<div> <!-- Content 에 hover 됐을때 화면 -->
+							<div>
+								<p>프로그래밍 시작하기 : 파이썬 입문 (Inflearn Original)</p>
+								<p>체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원,
+									31살에 연봉 x천만원 이상 받는 개발자가 된 노하우를 모두 담았습니다!</p>
+							</div>
+							<div>
+								<p class="level"><img src="image/level">입문</p>
+								<p class="category"><img src="image/category">교양·기타, 취업·이직</p>
+								<p class="genre"><img src="image/genre">취업,면접,포트폴리오</p>
+							</div>
+							<div>
+								<img src="image/cart.png" class="addCart">
+								<img src="image/heart.png" class="addHeart">
+								<img src="image/plus.png" class="plus">
+							</div>
+						</div>
+						<div class="contents" id="ready02">
+							<div id="content02">
+								<img src="">
+								<p class="title">비전공자를 위한 개발자 취업 올인원 가이드 [통합편]</p>
+								<p class="name">한정수</p>
+								<div class="starPoint">
+									<img src="image/star.png">
+									<img src="image/star.png">
+									<img src="image/star.png">
+									<img src="image/star.png">
+									<img src="image/star.png">
+									<p>(0)</p>
+								</div>
+								<p class="price"><span style="text-decoration:line-through">₩143,000</span>₩114,400</p>
+							</div>
+							<div class="contentTag">
+								<p>새강의</p>
+								<p>할인중</p>
+							</div>
+						</div>
+						<div> <!-- Content 에 hover 됐을때 화면 -->
+							<div>
+								<p>비전공자를 위한 진짜 올인원 개발 클래스</p>
+								<p>왕초보도 할 수 있는 웹, 서버, 모바일 앱, 머신러닝까지 익히는 끝판왕 풀스택 강의입니다.
+									개발을 어디서부터 시작할지 막막했다면 이 강의를 강력 추천할게요. Javascript 하나로 진행합니다!</p>
+							</div>
+							<div>
+								<p class="level"><img src="image/level">입문</p>
+								<p class="category"><img src="image/category">웹 개발, 모바일 앱 개발, 데이터 분석</p>
+								<p class="genre"><img src="image/genre">JavaScript, React, Node.js</p>
+							</div>
+							<div>
+								<img src="image/cart.png" class="addCart">
+								<img src="image/heart.png" class="addHeart">
+								<img src="image/plus.png" class="plus">
+							</div>
+						</div>
+					</div> <!-- readyContent 끝 -->
+				</article><!-- readyContentBox 끝 -->
 
-
-
+				<article id="roadMapContentBox">
+					<div id="roadMapTitle">
+						<h1>기본부터 실무까지 제시해주는 로드맵 <img src=""><span>Ready!</span><img src="image/nextBtn.png"></h1>
+						<p>아무것도 몰라도 따라오다 보면 전문가가 될 수 있어요!</p>
+					</div>
+					<div id="prevNextButtonBox03">
+						<img id="prevButton03" src="image/contentPrevBtn.png">
+						<img id="nextButton03" src="image/contentNextBtn.png">
+					</div>
+					<div id="roadMapContent">
+						<div>
+							<img>
+							<div>
+								<h5>[입문~활용] MMORPG 게임 개발, 켠김에 끝판왕까지!(유니티+C#)</h5>
+							</div>
+						</div>
+						<div>
+							<img>
+							<div>
+								<h5>[초급~중급] 우아한형제들 백엔드 개발자 취업 로드맵</h5>
+							</div>
+						</div>
+						<div>
+							<img>
+							<div>
+								<h5>[초급~활용] 김영한의 스프링 부트와 JPA 실무 완전 정복 로드맵</h5>
+							</div>
+						</div>
+					</div> <!-- roadMapContent 끝 -->
+				</article> <!-- roadMapContentBox 끝 -->
 				<!-- 읽어보기 -->
 				<article id="curation_area">
 					<div id="curation_title"><h2>읽어보기</h2><img src="image/c.png"></div>
@@ -425,12 +578,10 @@
 				</div>
 
 
-
-
         </section>
             <footer>
             	<div id="footerBox">
-	            	<div id="bottomMenuBox">
+	            	<div id="bottomMenuBox"></div>
                 </div>
             </footer>
         </div> <!-- wrap 끝 -->
