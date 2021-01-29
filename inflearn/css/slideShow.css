@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/* slideShow.css */
+
+#slideShow {
+    position:relative;
+    height:520px;
+    margin:0 11%;
+}
+
+#slideShowBox {
+    width:1280px;
+    height:450px;
+    text-align:center;
+    overflow:hidden;
+}
+
+/* 슬라이드 패널 숨겨진 이미지까지 이미지 전체를 담는 영역 */
+
+#slidePanel {
+    position:relative;
+    width:100%;
+    height:450px;
+}
+
+/* 슬라이드 이미지 */
+.slideImage {
+    float:left;
+    width:100%;
+    height:450px;
+}
+
+/******************* ControlBox *******************/
+
+#controlBox {
+    width:100%;
+    height:30px;
+    padding:10px 0;
+}
+
+#controlBox div{
+    float:left
+}
+
+/* Button Box */
+#prevNextButtonBox {
+    width:10%;
+    height:25px;
+    background-color:gray;
+    margin-right:10px;
+    padding:6px 10px 0;
+    border-radius:50px;
+}
+
+#prevNextButtonBox div{float:left;}
+
+#showIndex {
+    margin-left:5px;
+    font-size:10pt;
+    color:white;
+}
+
+#control-wrapper{
+    margin-left:20px;
+}
+#control-wrapper img {
+    width:15px;
+    height:15px;
+    cursor:pointer;
+}
+
+/* slideControlBox */
+
+#slideControlBox{
+    width:76%;
+    border-left:solid 1px #ccc;
+    padding-left:10px;
+    overflow:hidden;
+}
+
+#controlPanel{
+    width:1280px;
+}
+
+#controlPanel li{
+    float:left;
+    height:25px;
+    padding:6px 15px 0;
+    margin-right:10px;
+    border:solid 1px #ccc;
+    border-radius: 50px;
+    font-size:10pt;
+    color:#616161;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/*클릭 이벤트용 class*/
+/* 기본 */
+.slideMenu{
+    float:left;
+    height:25px;
+    padding:6px 15px 0;
+    margin-right:10px;
+    border:solid 1px #ccc;
+    border-radius: 50px;
+    font-size:10pt;
+    color:#616161;
+    font-weight:bold;
+    cursor:pointer;
+}
+/* 클릭시 */
+.clickMenu{
+    border:solid 1px #24c27c;
+}
+
+/* 진행중인 모든 이벤트 보는 버튼 */
+#listBtnBox {
+    width:9%;
+}
+#listBtnBox div{
+    width:25px;
+    height:25px;
+    margin-left:10px;
+    padding:5px;
+    padding-top:6px;
+    border:solid 1px #ccc;
+    border-radius:80px;
+    box-shadow:0 0 3px gray;
+    cursor:pointer;
+}
+#listBtnBox img{
+    width:15px;
+    height:15px;
+    display:center
+}
+
+/******************* subControl Box *******************/
+
+#subControlBox{
+    display:none;
+    margin-top:10px;
+    margin-right:5%;
+    width:700px;
+    float:right;
+    border:solid 1px #ccc;
+    border-radius:20px;
+    box-shadow:0 0 3px gray;
+    background-color:white;
+}
+/* subControl 상단 */
+
+#subControlTitle{
+    height:48px;
+    display:flex;
+    border-bottom:solid 1px #ccc;
+    align-items:center;
+    justify-content: space-between;
+    padding:0 20px;
+}
+
+#closeBox {
+    color:gray;
+    text-decoration:underline;
+}
+/* subControl 하단 */
+
+#subControl {
+    height:100%;
+    display:flex;
+    border-bottom:solid 1px #ccc;
+    padding: 20px 10px 10px;
+}
+
+#subControl ul {margin:0;}
+
+#subControl li{
+    float:left;
+    height:25px;
+    padding:6px 15px 0;
+    margin-right:10px;
+    margin-bottom:10px;
+    border:solid 1px #ccc;
+    border-radius: 50px;
+    font-size:10pt;
+    color:#616161;
+    font-weight:bold;
+    cursor:pointer;
+}
+

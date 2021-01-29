@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+/*** mainMenu.css ***/
+#logoBox{
+    float:left;
+}
+.menu-left {
+    float:left;
+    padding-left:10px;
+}
+
+.menu-left a{
+    color:#616161;
+}
+.menu-left img{
+    width:20px;
+    padding-left:10px;
+}
+
+#mainBox li{
+    padding:0 10px;
+    float:left;
+    text-align:center;
+    height:80px;
+    line-height:80px;
+}
+#mainBox img{
+    vertical-align:middle;
+}
+
+.menu-right {
+    float:right;
+    height:80px;
+}
+.menu-right ul{
+    float:right;
+}
+#knowledge{
+    padding-left: 10px;
+    color:#616161;
+}
+
+#mainBox{
+    margin:0 11%;
+    height:80px;
+}
+
+#mainBox ul li a{
+    text-decoration:none; /* 밑줄 없애기 */
+    font-size:18px;
+    font-weight:bold;
+}
+
+#login {
+    border: 1px solid;
+    padding: 8px;
+    background: #fff;
+    color:#616161;
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+}
+
+#register {
+    border: 1px solid;
+    padding: 8px;
+    color:#fff;
+    background: #ff7867;
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+}
+#search_input{
+    background-color:#f6f6f6;
+    color: #5f5f5f;
+    border: 1px solid transparent;
+    width:200px;
+    border-radius: 3px;
+    height:40px;
+}
+
+
+
+/*** 서브메뉴박스 ****/
+
+#subMenuBox{
+    visibility:visibility;
+}
+
+
+
+/** 헤더 고정 **/
+.MenuFixed{
+    position:fixed;
+    top:0px;
+}
