@@ -37,3 +37,7 @@
     padding: 10px 10px 70px 10px;
     box-shadow:1px 1px 5px 1px #d6d6d6;
 }
+
+#subMenuItem2 img{
+    width:20px;
+}
