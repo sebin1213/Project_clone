@@ -15,6 +15,15 @@ $(function(){
         // 슬라이드 이동
         var moveLeft= -(index*boxWidth);
         $('#slidePanel').animate({left:moveLeft},'slow');
+
+        // 슬라이드 메뉴 디자인 변경
+        $('.slideMenu').css({'color':'#616161','border':'solid 1px #ccc'});
+        $('.slideMenu').eq(index).css({'color':'#24c27c','border':'solid 1px #24c27c'});
+        $('.slideMenu02').css({'color':'#616161','border':'solid 1px #ccc'});
+        $('.slideMenu02').eq(index).css({'color':'#24c27c','border':'solid 1px #24c27c'});
+
+        // 슬라이드 showIndex (current-Index,total_count) 변경
+        $('#current-Index').text(index+1);
     }
 
     // prevButton 클릭시 앞으로 이동
@@ -37,20 +46,14 @@ $(function(){
         moveSlide(movedIndex);
     }); // nextBtn close
 
+    $('#controlPanel li:first-child').css({'color':'#24c27c','border':'solid 1px #24c27c'});
+    $('#subControl li:first-child').css({'color':'#24c27c','border':'solid 1px #24c27c'});
 
     // slideMenu 클릭시 css 변경
     $('.slideMenu').each(function(index){
 			// 클릭했을 때 현재 인덱스 값을 moveSlide() 함수에게 전달
-			$('#controlPanel li:first-child').css({'color':'#24c27c','border':'solid 1px #24c27c'});
-			$('#subControl li:first-child').css({'color':'#24c27c','border':'solid 1px #24c27c'});
-
             $(this).on('click', function(){
                 moveSlide(index);
-                $('.slideMenu').css({'color':'black','border':'solid 1px #ccc'});
-                $('.slideMenu').eq(index).css({'color':'#24c27c','border':'solid 1px #24c27c'});
-                $('.slideMenu02').css({'color':'black','border':'solid 1px #ccc'});
-                $('.slideMenu02').eq(index).css({'color':'#24c27c','border':'solid 1px #24c27c'});
-
             }); // on close
     });
 
@@ -79,18 +82,9 @@ $(function(){
     // item 클릭시 slide 이미지 변경
      $('.slideMenu02').each(function(index){
         // 클릭했을 때 현재 인덱스 값을 moveSlide() 함수에게 전달
-        $('#controlPanel li:first-child').css({'color':'#24c27c','border':'solid 1px #24c27c'});
-        $('#subControl li:first-child').css({'color':'#24c27c','border':'solid 1px #24c27c'});
-
         $(this).on('click', function(){
             moveSlide(index);
-            $('.slideMenu').css({'color':'black','border':'solid 1px #ccc'});
-            $('.slideMenu').eq(index).css({'color':'#24c27c','border':'solid 1px #24c27c'});
-            $('.slideMenu02').css({'color':'black','border':'solid 1px #ccc'});
-            $('.slideMenu02').eq(index).css({'color':'#24c27c','border':'solid 1px #24c27c'});
-
         }); // on close
-
     });
 
 

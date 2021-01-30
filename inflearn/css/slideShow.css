@@ -3,7 +3,8 @@
 
 #slideShow {
     position:relative;
-    width:100%;
+    margin: 0 auto;
+    width: 80%
     height:500px;
     box-shadow:0 0 3px #ccc;
 }
@@ -26,7 +27,7 @@
 /* 슬라이드 이미지 */
 .slideImage {
     float:left;
-    width:1430px;
+    width:100vw;
     height:450px;
 }
 
