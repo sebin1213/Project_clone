@@ -8,8 +8,8 @@ $(function(){
     var movedIndex=0;
     var length=$('.slideImage').length;
 
-    $('#controlPanel li:first-child').css({'color':'#24c27c','border':'solid 1px #24c27c'});
-    $('#subControl li:first-child').css({'color':'#24c27c','border':'solid 1px #24c27c'});
+    $('#controlPanel li:first-child').css({'color':'#24c27c','border':'solid 2px #24c27c'});
+    $('#subControl li:first-child').css({'color':'#24c27c','border':'solid 2px #24c27c'});
 
     // 슬라이드 패널을 움직여주는 함수
     function moveSlide(index){
@@ -24,11 +24,18 @@ $(function(){
         var moveLeft= -(index*boxWidth);
         $('#slidePanel').animate({left:moveLeft},'slow');
 
+        var menuWidth= $('#slideControlBox').width();
+        var width_ul = $('.controlPanel li:nth-child('+index+')').width();
+        var moveMenu= -(index*width_ul);
+        $('.controlPanel').animate({left:moveMenu},'slow');
+
+        $('#slidePanel').animate({left:moveLeft},'slow');
+
         // 슬라이드 메뉴 디자인 변경
         $('.slideMenu').css({'color':'#616161','border':'solid 1px #ccc'});
-        $('.slideMenu').eq(index).css({'color':'#24c27c','border':'solid 1px #24c27c'});
+        $('.slideMenu').eq(index).css({'color':'#24c27c','border':'solid 2px #24c27c'});
         $('.slideMenu02').css({'color':'#616161','border':'solid 1px #ccc'});
-        $('.slideMenu02').eq(index).css({'color':'#24c27c','border':'solid 1px #24c27c'});
+        $('.slideMenu02').eq(index).css({'color':'#24c27c','border':'solid 2px #24c27c'});
     }
 
     // prevButton 클릭시 앞으로 이동
