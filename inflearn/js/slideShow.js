@@ -11,6 +11,12 @@ $(function(){
     function moveSlide(index){
         // 전달받은 index 값을 movedIndex 에 저장
         movedIndex = index; // 전역변수
+
+        // 슬라이드 showIndex (current-Index,total_count) 변경
+        $('#current-Index').text(index+1);
+
+
+
         var boxWidth= $('#slideShowBox img').width();
         // 슬라이드 이동
         var moveLeft= -(index*boxWidth);
@@ -22,15 +28,18 @@ $(function(){
         $('.slideMenu02').css({'color':'#616161','border':'solid 1px #ccc'});
         $('.slideMenu02').eq(index).css({'color':'#24c27c','border':'solid 1px #24c27c'});
 
-        // 슬라이드 showIndex (current-Index,total_count) 변경
-        $('#current-Index').text(index+1);
+
     }
 
+    var length=$('.slideImage').length;
     // prevButton 클릭시 앞으로 이동
     $('#prevBtn').on('click',function(){
         // 버튼 클릭시 보여줘야 할 이미지 index 결정해서
-        if(movedIndex != 0) // 첫 번째 이미지가 아니라면
-            movedIndex -= 1; // 현재 이미지 이전 이미지의 인덱스로 설정
+        movedIndex -= 1; // 현재 이미지 이전 이미지의 인덱스로 설정
+
+        if(movedIndex<0)
+            movedIndex=length-1;
+
 
         // moveSlide() 호출
         moveSlide(movedIndex);
@@ -39,12 +48,31 @@ $(function(){
     // nextButton 클릭시 뒤로 이동
     $('#nextBtn').on('click',function(){
         // 버튼 클릭시 보여줘야 할 이미지 index 결정해서
-        if(movedIndex != 8) // 마지막 이미지가 아니라면
-            movedIndex += 1; // 다음 이미지의 인덱스
+        movedIndex += 1; // 다음 이미지의 인덱스
+
+        if(movedIndex>=length)
+            movedIndex=0;
 
         // moveSlide() 호출
         moveSlide(movedIndex);
     }); // nextBtn close
+
+    /* pauseButton Event */
+    // 클릭시 상태 변화
+    $('#pauseBtn').on('click',
+        function(){
+            var status = $('#control-wrapper img:nth-child(2)').attr('id')
+
+            if(status=='pauseBtn'){
+                $('#pauseBtn').attr('src','image/playBtn.png');
+                $('#pauseBtn').attr('id','playBtn');
+                $('slide')
+            }
+            else{
+                $('#playBtn').attr('src','image/pauseBtn.png');
+                $('#playBtn').attr('id','pauseBtn');
+            }
+    });
 
     $('#controlPanel li:first-child').css({'color':'#24c27c','border':'solid 1px #24c27c'});
     $('#subControl li:first-child').css({'color':'#24c27c','border':'solid 1px #24c27c'});

@@ -19,7 +19,7 @@
 
 #slidePanel {
     position:relative;
-    width:11440px;
+    width:11520px;
     height:450px;
 }
 
@@ -42,6 +42,8 @@
     align-items:center;
 }
 
+.baseMenu{'color':'#616161','border':'solid 1px #ccc'}
+.clickMenu{{'color':'#24c27c','border':'solid 1px #24c27c'}}
 
 /* Button Box */
 #prevNextButtonBox {
