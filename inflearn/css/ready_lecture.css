@@ -81,6 +81,7 @@
 #readyContent .contents{
     display:inline-block;
     width:22%;
+    height:300px;
     vertical-align:top;
     margin:10px;
     margin-left:17px;
@@ -91,6 +92,7 @@
 
 .basicBox{
     height:300px;
+    position:relative;
 }
 
 .basicBox img{
@@ -143,7 +145,15 @@
 }
 /****** HOVER *******/
 
-.hoverBox{}
+.hoverBox{
+    height:300px;
+    position:relative;
+    top:-300px;
+    background-color:#000000c7;
+    color:white;
+    display:none;
+    padding:0 10px 0;
+}
 
 .hoverContent{
     display:inline-block;
@@ -151,4 +161,28 @@
     word-break:break-all;
     overflow:hidden;
     text-overflow:ellipsis;
-    }
+}
+
+.hoverContent p:nth-child(1){
+    font-weight:bold;
+    fot-size:1rem;
+}
+.hoverContent p:nth-child(2){
+    font-size:.8rem;
+}
+
+.hoverDir p{
+    margin:0;
+    font-size:.8rem;
+    font-weight:bold;
+    color:#c5ebf8;
+}
+
+.hoverMenu img{
+    display:block;
+    position:relative;
+    left:90%;
+    weight:20px;
+    height:20px;
+
+}
