@@ -26,7 +26,8 @@
 /* 슬라이드 이미지 */
 .slideImage {
     float:left;
-    width:1430px;
+    /*width:1430px;*/
+    width:100vw; /*이부분 수정*/
     height:450px;
 }
 
