@@ -1,11 +1,15 @@
 /**
 * slideShow.js
 **/
-
 $(function(){
 
+    autoPlay();
     // 이동한 이미지의 index 값 저장 (현재 보고 있는 이미지-현재위치)
     var movedIndex=0;
+    var length=$('.slideImage').length;
+
+    $('#controlPanel li:first-child').css({'color':'#24c27c','border':'solid 1px #24c27c'});
+    $('#subControl li:first-child').css({'color':'#24c27c','border':'solid 1px #24c27c'});
 
     // 슬라이드 패널을 움직여주는 함수
     function moveSlide(index){
@@ -14,8 +18,6 @@ $(function(){
 
         // 슬라이드 showIndex (current-Index,total_count) 변경
         $('#current-Index').text(index+1);
-
-
 
         var boxWidth= $('#slideShowBox img').width();
         // 슬라이드 이동
@@ -27,55 +29,34 @@ $(function(){
         $('.slideMenu').eq(index).css({'color':'#24c27c','border':'solid 1px #24c27c'});
         $('.slideMenu02').css({'color':'#616161','border':'solid 1px #ccc'});
         $('.slideMenu02').eq(index).css({'color':'#24c27c','border':'solid 1px #24c27c'});
-
-
     }
 
-    var length=$('.slideImage').length;
     // prevButton 클릭시 앞으로 이동
     $('#prevBtn').on('click',function(){
-        // 버튼 클릭시 보여줘야 할 이미지 index 결정해서
-        movedIndex -= 1; // 현재 이미지 이전 이미지의 인덱스로 설정
-
-        if(movedIndex<0)
-            movedIndex=length-1;
-
-
-        // moveSlide() 호출
-        moveSlide(movedIndex);
-    }); // prevBtn close
-
+        prevChkPlay();
+    });
     // nextButton 클릭시 뒤로 이동
     $('#nextBtn').on('click',function(){
-        // 버튼 클릭시 보여줘야 할 이미지 index 결정해서
-        movedIndex += 1; // 다음 이미지의 인덱스
-
-        if(movedIndex>=length)
-            movedIndex=0;
-
-        // moveSlide() 호출
-        moveSlide(movedIndex);
+        nextChkPlay();
     }); // nextBtn close
 
     /* pauseButton Event */
     // 클릭시 상태 변화
     $('#pauseBtn').on('click',
         function(){
-            var status = $('#control-wrapper img:nth-child(2)').attr('id')
-
+            var status = $('#control-wrapper img:nth-child(2)').attr('id') // pause 버튼 상태 변수
             if(status=='pauseBtn'){
                 $('#pauseBtn').attr('src','image/playBtn.png');
                 $('#pauseBtn').attr('id','playBtn');
-                $('slide')
+                autoPlayStop();
             }
             else{
                 $('#playBtn').attr('src','image/pauseBtn.png');
                 $('#playBtn').attr('id','pauseBtn');
+                autoPlay();
             }
     });
 
-    $('#controlPanel li:first-child').css({'color':'#24c27c','border':'solid 1px #24c27c'});
-    $('#subControl li:first-child').css({'color':'#24c27c','border':'solid 1px #24c27c'});
 
     // slideMenu 클릭시 css 변경
     $('.slideMenu').each(function(index){
@@ -94,6 +75,7 @@ $(function(){
         if(status=='block'){
             $('#listBtn img').attr('src','image/up-arrow-green.png');
             $('#listBtn').css('border','solid 1px #24c27c');
+
         }else{
             $('#listBtn img').attr('src','image/down-arrow.png');
             $('#listBtn').css('border','solid 1px #dee2e6');
@@ -115,5 +97,34 @@ $(function(){
         }); // on close
     });
 
+    function autoPlay(){
+        auto=setInterval(function(){
+            nextChkPlay();
+        },3000);
+    }
 
+    function autoPlayStop(){
+        clearInterval(auto);
+    }
+
+    function prevChkPlay(){
+        // 버튼 클릭시 보여줘야 할 이미지 index 결정해서
+        // 현재 이미지 이전 이미지의 인덱스로 설정
+        if(movedIndex<1)
+            movedIndex=length-1;
+        else
+            movedIndex--;
+
+        // moveSlide() 호출
+        moveSlide(movedIndex);
+    }
+
+    function nextChkPlay(){
+        if(movedIndex>=length-1)
+            movedIndex=0;
+        else
+            movedIndex++;
+        moveSlide(movedIndex);
+    }
 }); // function() 종료
+
