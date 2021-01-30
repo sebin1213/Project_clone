@@ -17,10 +17,11 @@
 #readyTitle h1{
     position:relative;
     left:10px;
+    cursor:pointer;
 }
 
 #readyTitle h1 span{color:red;font-size:9pt;}
-#readyTitle h1 img{width:15px;height:15px;}
+#readyTitle h1 img{width:15px;height:15px;margin-left:5px;}
 
 #readyTitle p{
     position:relative;
@@ -153,6 +154,7 @@
     color:white;
     display:none;
     padding:0 10px 0;
+    cursor:pointer;
 }
 
 .hoverContent{
