@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/* ready_lecture.css */
+
+#readyContentBox{
+     margin: 0 auto;
+     width: 80%;
+     text-align:left;
+}
+
+#readyContent .starPoint img{
+    width:15px;
+    height:15px;
+}
+
+/************************* Ready Content Title **************************/
+
+#readyTitle h1{
+    position:relative;
+    left:10px;
+}
+
+#readyTitle h1 span{color:red;font-size:9pt;}
+#readyTitle h1 img{width:15px;height:15px;}
+
+#readyTitle p{
+    position:relative;
+    left:10px;
+    top:-5px;
+    font-size:9pt;
+    color:#616161;
+}
+
+/************************* Prev/Next Button **************************/
+
+#prevNextButtonBox02 {
+    position:absolute;
+    width:80%;
+    margin-top:100px;
+    z-index:9;
+}
+
+#prevNextButtonBox02 img {
+    width:36px;
+    height:36px;
+    background-color:white;
+    border:solid 1px #dee2e6;
+    border-radius:50px;
+    box-shadow:0 0 3px #dee2e6;
+    cursor:pointer;
+    align-items: center;
+}
+
+#prevBtn02 {
+    position:relative;
+    float:left;
+    left:10px;
+    opacity:0.6;
+    cursor:pointer;
+}
+
+#nextBtn02 {
+    position:relative;
+    float:right;
+    right:10px;
+    opacity:0.8;
+    cursor:pointer;
+}
+
+#prevBtn02:hover{opacity:1;}
+#nextBtn02:hover{opacity:1;}
+
+/************************* Ready Content **************************/
+
+/* ready content */
+
+#readyContent{
+    display:flex;
+    align-item:center;
+}
+
+#readyContent .contents{
+    display:inline-block;
+    width:22%;
+    vertical-align:top;
+    margin:10px;
+    margin-left:17px;
+}
+
+
+/****** BASIC ********/
+
+.basicBox{
+    height:300px;
+}
+
+.basicBox img{
+    width:100%;
+    height:150px;
+}
+
+.basicBox .title{
+    display:flex;
+    font-weight:bold;
+    margin:0;
+    font-size:1rem;
+}
+
+.basicBox .name{
+    margin:0;
+    display:flex;
+    font-size:.825rem;
+}
+
+.starPoint {
+    position:relative;
+    display:flex;
+    align-items:center;
+    width:100%;
+}
+
+.starPoint p{
+    width:50px;
+    margin:0
+}
+
+.price {display:flex;}
+.price p{color:blue;font-weight:bold;margin:0;}
+
+.contentTag{display:flex;}
+.contentTag div{
+    height:15px;
+    margin-right:10px;
+    margin-top:10px;
+    border-radius:5px;
+    padding:5px;
+}
+.contentTag div:nth-child(1){background-color:hsl(321,63%,90%);}
+.contentTag div:nth-child(2){background-color:hsl(182,75%,94%);}
+
+.contentTag div p{
+    font-size:.5rem;
+    margin:0;
+}
+/****** HOVER *******/
+
+.hoverBox{}
+
+.hoverContent{
+    display:inline-block;
+    height:150px;
+    word-break:break-all;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    }
