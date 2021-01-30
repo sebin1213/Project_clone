@@ -107,57 +107,64 @@
 				<article id="slideShow"> <!-- 슬라이드 쇼 -->
 					<div id="slideShowBox">
 						<div id="slidePanel">
-							<a href="#"><img src="" class="slideImage"></a>
-							<a href="#"><img src="" class="slideImage"></a>
-							<a href="#"><img src="" class="slideImage"></a>
-							<a href="#"><img src="" class="slideImage"></a>
-							<a href="#"><img src="" class="slideImage"></a>
-							<a href="#"><img src="" class="slideImage"></a>
-							<a href="#"><img src="" class="slideImage"></a>
-							<a href="#"><img src="" class="slideImage"></a>
+							<a href="#"><img src="image/slideImage01.jpg" class="slideImage"></a>
+							<a href="#"><img src="image/slideImage02.jpg" class="slideImage"></a>
+							<a href="#"><img src="image/slideImage03.jpg" class="slideImage"></a>
+							<a href="#"><img src="image/slideImage01.jpg" class="slideImage"></a>
+							<a href="#"><img src="image/slideImage02.jpg" class="slideImage"></a>
+							<a href="#"><img src="image/slideImage03.jpg" class="slideImage"></a>
+							<a href="#"><img src="image/slideImage01.jpg" class="slideImage"></a>
+							<a href="#"><img src="image/slideImage02.jpg" class="slideImage"></a>
 						</div> <!-- slidePanel 끝 -->
 					</div> <!-- slideShowBox 끝 -->
 					<div id="controlBox">
 						<div id="prevNextButtonBox">
-							<p id="showIndex"></p>
-							<img src="image/prevBtn.png" id="prevBtn">
-							<img src="image/pauseBtn.png" id="pauseBtn">
-							<img src="image/nextBtn.png" id="nextBtn">
+							<div id="showIndex"><span id="current-Index">1</span>/<span id="total-count">8</span></div>
+							<div id="control-wrapper">
+								<img src="image/prevBtn.png" id="prevBtn">
+								<img src="image/pauseBtn.png" id="pauseBtn">
+								<img src="image/nextBtn.png" id="nextBtn">
+							</div>
 						</div> <!-- prevNextButtonBox 끝 -->
-						<div id="controlPanel">
-							<ul id="controlItem">
-								<li>나에게 맞는 강의</li>
-								<li>큐레이션</li>
-								<li>코딩 입문 강의</li>
-								<li>인프런이 만난 사람</li>
-								<li>새로운 강의</li>
-								<li>지금 할인중</li>
-								<li>카톡 친구 할인!</li>
-								<li>인프런은</li>
-							</ul>
-						</div> <!-- controlPanel 끝 -->
-						<div id="listBtnBox">
-							<img src="image/arrow01.png" id="listBtn">
+						<div id="divider"></div>
+						<div id="slideControlBox">
+							<div id="controlPanel">
+								<ul id="controlItem">
+									<li class="slideMenu">나에게 맞는 강의</li>
+									<li class="slideMenu">큐레이션</li>
+									<li class="slideMenu">코딩 입문 강의</li>
+									<li class="slideMenu">인프런이 만난 사람</li>
+									<li class="slideMenu">새로운 강의</li>
+									<li class="slideMenu">지금 할인중</li>
+									<li class="slideMenu">카톡 친구 할인!</li>
+									<li class="slideMenu">인프런은</li>
+								</ul>
+							</div> <!-- controlPanel 끝 -->
 						</div>
-						<div id="subControlBox"> <!-- toggle 될 부분 subControlPanel -->
-							<div>
+						<div id="listBtnBox">
+							<div id="listBtn">
+								<img src="image/down-arrow.png">
+							</div>
+						</div>
+					</div> <!-- controlBox 끝 -->
+					<div id="subControlBox"> <!-- toggle 될 부분 subControlPanel -->
+							<div id="subControlTitle">
 								<h3>진행중인 모든 이벤트</h3>
-								<a href="#" id="closeBox">닫기</a>
+								<p id="closeBox">닫기</p>
 							</div>
 							<div id="subControl">
 								<ul id="subControlItem">
-									<li>나에게 맞는 강의</li>
-									<li>큐레이션</li>
-									<li>코딩 입문 강의</li>
-									<li>인프런이 만난 사람</li>
-									<li>새로운 강의</li>
-									<li>지금 할인중</li>
-									<li>카톡 친구 할인!</li>
-									<li>인프런은</li>
+									<li class="slideMenu02">나에게 맞는 강의</li>
+									<li class="slideMenu02">큐레이션</li>
+									<li class="slideMenu02">코딩 입문 강의</li>
+									<li class="slideMenu02">인프런이 만난 사람</li>
+									<li class="slideMenu02">새로운 강의</li>
+									<li class="slideMenu02">지금 할인중</li>
+									<li class="slideMenu02">카톡 친구 할인!</li>
+									<li class="slideMenu02">인프런은</li>
 								</ul>
 							</div>
 						</div> <!-- subControlBox 끝 -->
-					</div> <!-- controlBox 끝 -->
 				</article>
 				<center>
 					<h2>배우고 나누고 성장하세요</h2>
