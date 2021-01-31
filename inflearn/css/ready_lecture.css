@@ -36,39 +36,33 @@
 #prevNextButtonBox02 {
     position:absolute;
     width:80%;
-    margin-top:100px;
+    margin-top:150px;
     z-index:9;
 }
-
-#prevNextButtonBox02 img {
-    width:36px;
-    height:36px;
+#prevNextButtonBox02 .btnShape{
+    width:35px;
+    height:35px;
     background-color:white;
     border:solid 1px #dee2e6;
     border-radius:50px;
-    box-shadow:0 0 3px #dee2e6;
-    cursor:pointer;
-    align-items: center;
-}
-
-#prevBtn02 {
-    position:relative;
-    float:left;
-    left:10px;
-    opacity:0.6;
-    cursor:pointer;
-}
-
-#nextBtn02 {
-    position:relative;
-    float:right;
-    right:10px;
+    box-shadow:0 2px 8px 0 rgb(0 0 0 / 10%);
     opacity:0.8;
     cursor:pointer;
+    padding: 5px;
+    padding-top: 6px;
 }
 
-#prevBtn02:hover{opacity:1;}
-#nextBtn02:hover{opacity:1;}
+#prevNextButtonBox02 div:nth-child(1){float:left;}
+#prevNextButtonBox02 div:nth-child(2){float:right;}
+
+.btnShape img {
+    width:35px;
+    height:35px;
+    text-align:center;
+    opacity:1;
+}
+#prevNextButtonBox02 .btnShape:hover{box-shadow:0 2px 8px 0 rgb(0 0 0 / 40%);}
+
 
 /************************* Ready Content **************************/
 
@@ -82,23 +76,24 @@
 #readyContent .contents{
     display:inline-block;
     width:22%;
-    height:300px;
+    height:350px;
     vertical-align:top;
     margin:10px;
-    margin-left:17px;
+    margin-left:21px;
 }
 
 
 /****** BASIC ********/
 
 .basicBox{
-    height:300px;
+    height:350px;
     position:relative;
 }
 
 .basicBox img{
     width:100%;
     height:150px;
+    margin-bottom:5px;
 }
 
 .basicBox .title{
@@ -106,12 +101,14 @@
     font-weight:bold;
     margin:0;
     font-size:1rem;
+    margin-bottom:5px;
 }
 
 .basicBox .name{
     margin:0;
     display:flex;
     font-size:.825rem;
+    margin-bottom:5px;
 }
 
 .starPoint {
@@ -119,6 +116,7 @@
     display:flex;
     align-items:center;
     width:100%;
+    margin-bottom:5px;
 }
 
 .starPoint p{
@@ -126,10 +124,10 @@
     margin:0
 }
 
-.price {display:flex;}
+.price {display:flex;margin-bottom:5px;}
 .price p{color:blue;font-weight:bold;margin:0;}
 
-.contentTag{display:flex;}
+.contentTag{display:flex;margin-top:10px;}
 .contentTag div{
     height:15px;
     margin-right:10px;
@@ -144,12 +142,13 @@
     font-size:.5rem;
     margin:0;
 }
+
 /****** HOVER *******/
 
 .hoverBox{
-    height:300px;
+    height:350px;
     position:relative;
-    top:-300px;
+    top:-350px;
     background-color:#000000c7;
     color:white;
     display:none;
@@ -158,11 +157,15 @@
 }
 
 .hoverContent{
-    display:inline-block;
-    height:150px;
-    word-break:break-all;
-    overflow:hidden;
-    text-overflow:ellipsis;
+    height:13em;
+    line-height: 1.6em;
+    font-size: .85rem;
+    margin-bottom: .5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
 }
 
 .hoverContent p:nth-child(1){
@@ -174,17 +177,55 @@
 }
 
 .hoverDir p{
-    margin:0;
+    margin:1px;
     font-size:.8rem;
     font-weight:bold;
     color:#c5ebf8;
 }
 
+.hoverDir img{
+    width:20px;
+    height:20px;
+}
+
+.hoverMenu{
+    position:absolute
+    right:30px;
+}
+
+.hoverMenu div{
+    display:flex;
+    height:25px;
+}
 .hoverMenu img{
     display:block;
     position:relative;
     left:90%;
     weight:20px;
     height:20px;
+    margin:5px;
+}
 
+.arrow_box {
+	position:absolute;
+	right:20%;
+	background: #ebcc53;
+	font-size:.7rem;
+	padding:10px;
+	margin:0;
+	text-align:center;
+	color:black;
+}
+.arrow_box:after {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-left-color: #ebcc53;
+	border-width: 10px;
+	margin-top: -10px;
 }
