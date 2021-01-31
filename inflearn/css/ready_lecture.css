@@ -1,30 +1,30 @@
 @charset "UTF-8";
 /* ready_lecture.css */
 
-#readyContentBox{
+.articleContentBox{
      margin: 0 auto;
      width: 80%;
      text-align:left;
      overflow:hidden;
 }
 
-#readyContent .starPoint img{
+.articleContent .starPoint img{
     width:15px;
     height:15px;
 }
 
 /************************* Ready Content Title **************************/
 
-#readyTitle h1{
+.articleTitle h1{
     position:relative;
     left:10px;
     cursor:pointer;
 }
 
-#readyTitle h1 span{color:red;font-size:9pt;}
-#readyTitle h1 img{width:15px;height:15px;margin-left:5px;}
+.articleTitle h1 span{color:red;font-size:9pt;}
+.articleTitle h1 img{width:15px;height:15px;margin-left:5px;}
 
-#readyTitle p{
+.articleTitle p{
     position:relative;
     left:10px;
     top:-5px;
@@ -34,13 +34,13 @@
 
 /************************* Prev/Next Button **************************/
 
-#prevNextButtonBox02 {
+.prevNextButtonBox02 {
     position:absolute;
     width:80%;
     margin-top:150px;
     z-index:9;
 }
-#prevNextButtonBox02 .btnShape{
+.prevNextButtonBox02 .btnShape{
     width:35px;
     height:35px;
     background-color:white;
@@ -53,8 +53,8 @@
     padding-top: 6px;
 }
 
-#prevNextButtonBox02 div:nth-child(1){float:left;}
-#prevNextButtonBox02 div:nth-child(2){float:right;}
+.prevNextButtonBox02 div:nth-child(1){float:left;}
+.prevNextButtonBox02 div:nth-child(2){float:right;}
 
 .btnShape img {
     position:relative;
@@ -70,12 +70,12 @@
 
 /* ready content */
 
-#readyContent{
+.articleContent{
     position:relative;
     width:3000px;
 }
 
-#readyContent .contents{
+.articleContent .contents{
     display:inline-block;
     width:250px;
     height:350px;
