@@ -29,21 +29,14 @@ $(function(){
     } // moveSlide function() close
 
     $('#prevBtn02').on('click',function(){
-        if(movedPage != 0){
+        if(movedPage != 0)
             movedPage--;
-            $(this).prop("disabled", false);
-        }
-        else
-            (this).prop("disabled", true);
         moveSlide(movedPage);
     }); // prevBtn click close
 
     $('#nextBtn02').on('click',function(){
-        if(movedPage != length/4-1){
+        if(movedPage != length/4-1)
             movedPage++;
-            $(this).prop("disabled", false);
-        }else
-            $(this).prop("disabled", true);
         moveSlide(movedPage);
     }); // nextBtn click close
 
