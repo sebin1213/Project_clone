@@ -17,7 +17,7 @@
 }
 
 #curation div{
-    text-align: initial;
+    text-align: center;
 }
 #curation h4{
     width: 94%;
@@ -31,6 +31,8 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     color:#595959;
+    text-align: initial;
+    margin: 10px auto;
 }
 #curation h2{
     width: 94%;
@@ -39,6 +41,8 @@
     white-space: nowrap;
     color:#333;
     font-size: 1.3rem;
+    text-align: initial;
+    margin: 0px auto;
 }
 #curation_title h2{
     display: inline-block;
