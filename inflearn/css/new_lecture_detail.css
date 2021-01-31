@@ -167,11 +167,10 @@ float:right;
 
     width: 35px;
     height: 35px;
-    background-color: white;
+    background-color: #fff;
     border: solid 1px #dee2e6;
     border-radius: 50px;
     box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
-    opacity: 0.8;
     cursor: pointer;
     padding: 5px;
     padding-top: 6px;
@@ -185,31 +184,20 @@ float:right;
     float: right;
     width: 35px;
     height: 35px;
-    background-color: white;
+    background-color: #ffffffc9;
     border: solid 1px #dee2e6;
     border-radius: 50px;
     box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
-    opacity: 0.8;
     cursor: pointer;
     padding: 5px;
     padding-top: 6px;
 }
-
-
-/*
-#new_lecture_but_area .btnShape {
-    width: 35px;
-    height: 35px;
-    background-color: white;
-    border: solid 1px #dee2e6;
-    border-radius: 50px;
-    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
-    opacity: 0.8;
-    cursor: pointer;
-    padding: 5px;
-    padding-top: 6px;
+#prev_nlec_Btn{
+opacity:0.1;
 }
-*/
+#next_nlec_Btn{
+opacity:1;
+}
 
 .new_lecture_ContentBox {
     margin: 0 auto;
@@ -228,10 +216,9 @@ float:right;
 
 .new_lecture_Content .contents {
     display: inline-block;
-    width: 7.85%;
+    width: 7.84%;
     height: 350px;
     vertical-align: top;
-    margin: 3px;
 }
 .new_lecture_Content .basicBox img {
     width: 100%;
@@ -255,4 +242,12 @@ float:right;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+}
+#new_lecture_content del{
+    color:#7d7d7d;
+}
+
+
+#new_lecture_content .price p{
+color:#007aff;
 }

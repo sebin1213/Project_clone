@@ -9,7 +9,7 @@
     line-height:80px;
     padding:0;
     background-color:#fff;
-    z-index:10;/*스크롤시 위에 오도록*/
+    z-index:30;/*스크롤시 위에 오도록*/
     border:solid 1px transparent;
     box-shadow:0 3px 5px 0px #dbdbdb;
 }
