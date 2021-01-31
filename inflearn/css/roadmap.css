@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* roadmap.css
+ * 기본 토대는 ready_lecture.css 에 존재
+ */
+
+#roadmap > .prevNextButtonBox02 {margin-top:100px;}
+
+#roadContent{position:relative; margin-left:3px;}
+
+#roadContent div {display:inline-block;}
+
+#roadContent .basicBox {
+    width:275px;
+    vertical-align:top;
+    margin-right:5px;
+}
+#roadContent .basicBox h5{font-size:1rem;}
