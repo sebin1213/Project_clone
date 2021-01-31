@@ -4,6 +4,42 @@ ready_lecture.js
 
 $(function(){
 
+    /************************ Button Event ************************/
+
+    /*** Hover Effect ***/
+    $('#prevNextButtonBox02 div').hover(
+        function(){
+            $(this).css({'box-shadow':'0 2px 8px 0 rgb(0 0 0 / 40%)','transition':'all ease 400ms'});
+        },
+        function(){
+            $(this).css({'box-shadow':'0 2px 8px 0 rgb(0 0 0 / 10%)','transition':'all ease 400ms'});
+        }
+    );//button hover close
+
+    /*** Click Event ***/
+    var movedPage=0;
+    var length=$('.contents').length; // 나열된 컨텐츠 개수 8개
+
+    function moveSlide(index){
+        movedPage = index;
+
+        var boxWidth= $('#readyContentBox').width();
+        var moveLeft= -(index*boxWidth);
+        $('#readyContent').animate({left:moveLeft},'slow');
+    } // moveSlide function() close
+
+    $('#prevBtn02').on('click',function(){
+        if(movedPage != 0)
+            movedPage--;
+        moveSlide(movedPage);
+    }); // prevBtn click close
+
+    $('#nextBtn02').on('click',function(){
+        if(movedPage != length/4-1)
+            movedPage++;
+        moveSlide(movedPage);
+    }); // nextBtn click close
+
 
     /************************ Content Hover ************************/
 

@@ -5,6 +5,7 @@
      margin: 0 auto;
      width: 80%;
      text-align:left;
+     overflow:hidden;
 }
 
 #readyContent .starPoint img{
@@ -56,26 +57,27 @@
 #prevNextButtonBox02 div:nth-child(2){float:right;}
 
 .btnShape img {
-    width:35px;
-    height:35px;
+    position:relative;
+    width:20px;
+    height:20px;
     text-align:center;
+    left:20%;
+    top:20%;
     opacity:1;
 }
-#prevNextButtonBox02 .btnShape:hover{box-shadow:0 2px 8px 0 rgb(0 0 0 / 40%);}
-
 
 /************************* Ready Content **************************/
 
 /* ready content */
 
 #readyContent{
-    display:flex;
-    align-item:center;
+    position:relative;
+    width:3000px;
 }
 
 #readyContent .contents{
     display:inline-block;
-    width:22%;
+    width:250px;
     height:350px;
     vertical-align:top;
     margin:10px;
