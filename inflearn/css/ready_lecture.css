@@ -19,16 +19,17 @@
     position:relative;
     left:10px;
     cursor:pointer;
+    font-size:1.5rem;
 }
 
-.articleTitle h1 span{color:red;font-size:9pt;}
+.articleTitle h1 span{color:red;font-size:1rem;}
 .articleTitle h1 img{width:15px;height:15px;margin-left:5px;}
 
 .articleTitle p{
     position:relative;
     left:10px;
     top:-5px;
-    font-size:9pt;
+    font-size:1rem;
     color:#616161;
 }
 
@@ -37,7 +38,7 @@
 .prevNextButtonBox02 {
     position:absolute;
     width:80%;
-    margin-top:150px;
+    margin-top:120px;
     z-index:9;
 }
 .prevNextButtonBox02 .btnShape{
@@ -77,11 +78,10 @@
 
 .articleContent .contents{
     display:inline-block;
-    width:250px;
+    width:7.44%;
     height:350px;
     vertical-align:top;
-    margin:10px;
-    margin-left:21px;
+
 }
 
 
@@ -104,6 +104,7 @@
     margin:0;
     font-size:1rem;
     margin-bottom:5px;
+    height:50px;
 }
 
 .basicBox .name{
@@ -137,13 +138,15 @@
     border-radius:5px;
     padding:5px;
 }
-.contentTag div:nth-child(1){background-color:hsl(321,63%,90%);}
-.contentTag div:nth-child(2){background-color:hsl(182,75%,94%);}
+.contentTag .discount_tag{background-color:hsl(1,100%,89%)}
+.contentTag .new_tag{background-color:hsl(182,75%,94%);}
+.contentTag .count_tag{background-color:hsl(321,63%,90%);}
 
 .contentTag div p{
     font-size:.5rem;
     margin:0;
 }
+
 
 /****** HOVER *******/
 
@@ -183,6 +186,7 @@
     font-size:.8rem;
     font-weight:bold;
     color:#c5ebf8;
+    font-weight:normal;
 }
 
 .hoverDir img{

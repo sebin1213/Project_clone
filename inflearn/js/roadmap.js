@@ -8,7 +8,6 @@ $(function(){
     /*** Click Event ***/
     var movedPage=0;
     var length=$('#roadContent>div').length; // 나열된 컨텐츠 개수 8개
-
     function moveSlide(index){
         movedPage = index;
 
@@ -29,4 +28,4 @@ $(function(){
         moveSlide(movedPage);
     }); // nextBtn click close
 
-}
+});
