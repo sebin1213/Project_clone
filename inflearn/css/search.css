@@ -2,9 +2,9 @@
         #search {
         height:40px;
         width:470px;
-        border:1px solid #ccc;
+        border:1px solid rgba(29,192,120,.24);
         border-radius:50px;
-        background:#aaffaa;
+        background-color:#aaffaa;
         }
         #search input{
         font-size:16px;

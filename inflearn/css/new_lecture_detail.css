@@ -225,10 +225,15 @@ opacity:1;
     margin-bottom: 5px;
 }
 
-.new_lecture_Content .basicBox{
-}
-
-.new_lecture_Content .hoverBox{
+.new_lecture_Content .hoverBox_lec{
+    height: 350px;
+    position: relative;
+    top: -350px;
+    background-color: #000000c7;
+    color: white;
+    display: none;
+    padding: 0 10px 0;
+    cursor: pointer;
 }
 .contentTag_new_lec{
     display:inline-block;
@@ -255,4 +260,47 @@ opacity:1;
 
 #new_lecture_content .price p{
 color:#007aff;
+}
+
+
+.hoverDir_lec p{
+    margin:1px;
+    font-size:.8rem;
+    font-weight:bold;
+    color:#c5ebf8;
+    font-weight:normal;
+}
+
+.hoverDir_lec img{
+    width:20px;
+    height:20px;
+}
+
+.hoverBox_lec .hoverMenu{
+    position:absolute
+    right:30px;
+}
+
+.hoverBox_lec .hoverMenu_lec div{
+    display:flex;
+    height:25px;
+}
+.hoverBox_lec .hoverMenu_lec img{
+    display:block;
+    position:relative;
+    left:90%;
+    weight:20px;
+    height:20px;
+    margin:5px;
+}
+
+.new_lecture_Content .basicBox{
+    height:350px;
+    position:relative;
+}
+
+.new_lecture_Content .basicBox img{
+    width:100%;
+    height:150px;
+    margin-bottom:5px;
 }

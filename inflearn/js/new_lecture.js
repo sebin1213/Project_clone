@@ -45,5 +45,14 @@ $(function(){
        moveSlide(move_Index);
     }); //next버튼 종료
 
+    $('.contents').hover(
+        function(){ // 마우스 올렸을 때
+            index = $(this).attr('id');
+            $('#'+index+'>.hoverBox_lec').css('display','block');
+        },
+        function(){ // 마우스 내렸을 때
+            $('#'+index+'>.hoverBox_lec').css('display','none');
+        }
+    ); // content hover close
 })
 
