@@ -21,7 +21,7 @@ $(function(){
         if(move_Index == 1.4){
              move_Index = move_Index - 1;
              move_Index=move_Index.toFixed(1);  /* 대체 왜 1.4에서 1을 빼는데 3.9가 나오는건데.....*/
-             $('#next_new_lecture_Btn').css('background-color','#ffffffc9');
+             $('#next_new_lecture_Btn').css({'background-color':'#ffffffc9','cursor' : 'pointer'});
             $('#next_nlec_Btn').css('opacity','1');
              }
         else if(move_Index==0.4 || move_Index==1){
@@ -39,7 +39,7 @@ $(function(){
             }
         else if(move_Index == 0 || move_Index == 0.4){
             move_Index = move_Index + 1;
-            $('#prev_new_lecture_Btn').css('background-color','#ffffffc9');
+            $('#prev_new_lecture_Btn').css({'background-color':'#ffffffc9','cursor' : 'pointer'});
             $('#prev_nlec_Btn').css('opacity','1');
             }
        moveSlide(move_Index);
