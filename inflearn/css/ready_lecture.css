@@ -128,7 +128,7 @@
 }
 
 .price {display:flex;margin-bottom:5px;}
-.price p{color:blue;font-weight:bold;margin:0;}
+.price p{color:#007aff;font-weight:bold;margin:0;}
 
 .contentTag{display:flex;margin-top:10px;}
 .contentTag div{
