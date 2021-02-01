@@ -25,3 +25,38 @@
 #roadContent .basicBox div{margin:-10px 20px 0;}
 
 #roadContent .basicBox h5{font-size:1rem;}
+
+
+#prevBtn03 {
+    z-index: 20;
+    position: absolute;
+    top: 35%;
+    left: 8%;
+    float: left;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border: solid 1px #dee2e6;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
+    cursor: pointer;
+    padding: 5px;
+    padding-top: 6px;
+}
+
+#nextBtn03 {
+    z-index: 20;
+    position: absolute;
+    top: 35%;
+    right: 8%;
+    float: right;
+    width: 35px;
+    height: 35px;
+    background-color: #ffffffc9;
+    border: solid 1px #dee2e6;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
+    cursor: pointer;
+    padding: 5px;
+    padding-top: 6px;
+}

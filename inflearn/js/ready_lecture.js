@@ -6,6 +6,10 @@ $(function(){
 
     /************************ Button Event ************************/
 
+    /* Button css init */
+    $('#prevBtn02').css({'cursor':'not-allowed','opacity':'0.2'});
+    $('#nextBtn02').css({'cursor':'pointer'});
+
     /*** Hover Effect ***/
     $('.prevNextButtonBox02 div').hover(
         function(){
@@ -23,20 +27,32 @@ $(function(){
     function moveSlide(index){
         movedPage = index;
 
-        var boxWidth= $('#ready_lecture').width();
+        var boxWidth= $('#roadmap').width();
         var moveLeft= -(index*boxWidth);
         $('#ready_content').animate({left:moveLeft},'slow');
+
+        // button allowed
+        if(movedPage==0){
+            $('#prevBtn02').css({'cursor':'not-allowed','opacity':'0.2'});
+        }else if(movedPage==length/5-1){
+            $('#nextBtn02').css({'cursor':'not-allowed','opacity':'0.2'});
+        }
+
     } // moveSlide function() close
 
     $('#prevBtn02').on('click',function(){
+        $('#nextBtn02').css({'cursor':'pointer','opacity':'1'});
         if(movedPage != 0)
             movedPage--;
+
         moveSlide(movedPage);
     }); // prevBtn click close
 
     $('#nextBtn02').on('click',function(){
-        if(movedPage != length/4-1)
+        $('#prevBtn02').css({'cursor':'pointer','opacity':'1'});
+        if(movedPage != length/5-1)
             movedPage++;
+
         moveSlide(movedPage);
     }); // nextBtn click close
 
