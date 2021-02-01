@@ -44,7 +44,6 @@
     border-radius:50px;
     box-shadow:0 2px 8px 0 rgb(0 0 0 / 10%);
     opacity:0.8;
-    cursor:pointer;
     padding: 5px;
     padding-top: 6px;
 }
@@ -52,17 +51,15 @@
 #prevBtn02 {
     z-index: 20;
     position: absolute;
-    top: 50%;
-    left: -2%;
+    top: 21%;
+    left: 8%;
     float: left;
-
     width: 35px;
     height: 35px;
     background-color: #fff;
     border: solid 1px #dee2e6;
     border-radius: 50px;
     box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
-    cursor: pointer;
     padding: 5px;
     padding-top: 6px;
 }
@@ -70,8 +67,8 @@
 #nextBtn02 {
     z-index: 20;
     position: absolute;
-    top: 50%;
-    right: -2%;
+    top: 21%;
+    right: 8%;
     float: right;
     width: 35px;
     height: 35px;
@@ -79,7 +76,6 @@
     border: solid 1px #dee2e6;
     border-radius: 50px;
     box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
-    cursor: pointer;
     padding: 5px;
     padding-top: 6px;
 }
@@ -107,10 +103,9 @@
 #ready_content{height:70%;}
 .articleContent .contents{
     display:inline-block;
-    width:7.84%;
+    width:7.8%;
     height:40%;
     vertical-align:top;
-
 }
 
 
