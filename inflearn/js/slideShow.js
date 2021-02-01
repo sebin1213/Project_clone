@@ -8,8 +8,12 @@ $(function(){
     var movedIndex=0;
     var length=$('.slideImage').length;
 
+    var back_color = ['#373672','#000000','#132239','#f6f7f9','#ffd592','#ffffff','#fafafa','#59cf93'];
+    var font_color = ['#ffffff','#ffffff','#ffffff','#000000','#000000','#000000','#000000','#ffffff'];
+
     $('#controlPanel li:first-child').css({'color':'#24c27c','border':'solid 2px #24c27c'});
     $('#subControl li:first-child').css({'color':'#24c27c','border':'solid 2px #24c27c'});
+
 
     // 슬라이드 패널을 움직여주는 함수
     function moveSlide(index){
@@ -19,23 +23,24 @@ $(function(){
         // 슬라이드 showIndex (current-Index,total_count) 변경
         $('#current-Index').text(index+1);
 
-        var boxWidth= $('#slideShowBox img').width();
+        var boxWidth= $('.slideSet').width();
         // 슬라이드 이동
         var moveLeft= -(index*boxWidth);
         $('#slidePanel').animate({left:moveLeft},'slow');
 
-        var menuWidth= $('#slideControlBox').width();
-        var width_ul = $('.controlPanel li:nth-child('+index+')').width();
-        var moveMenu= -(index*width_ul);
-        $('.controlPanel').animate({left:moveMenu},'slow');
-
-        $('#slidePanel').animate({left:moveLeft},'slow');
+        /* 배경색 및 글씨색 지정 */
+        var child=movedIndex+1;
+        $('#slidePanel>div:nth-child('+child+')').css('background-color',back_color[index]);
+        $('#slidePanel>div:nth-child('+child+')').css('color',font_color[index]);
 
         // 슬라이드 메뉴 디자인 변경
         $('.slideMenu').css({'color':'#616161','border':'solid 1px #ccc'});
         $('.slideMenu').eq(index).css({'color':'#24c27c','border':'solid 2px #24c27c'});
         $('.slideMenu02').css({'color':'#616161','border':'solid 1px #ccc'});
         $('.slideMenu02').eq(index).css({'color':'#24c27c','border':'solid 2px #24c27c'});
+
+        /* 슬라이드 메뉴 레이아웃 부분을 왼쪽으로 어떻게 넘기지.... */
+
     }
 
     // prevButton 클릭시 앞으로 이동
@@ -53,19 +58,17 @@ $(function(){
         function(){
             var status = $('#control-wrapper img:nth-child(2)').attr('id') // pause 버튼 상태 변수
             if(status=='pauseBtn'){
-                $('#pauseBtn').attr('src','image/playBtn.png');
+                $('#pauseBtn').attr('src','image/slide_play.png');
                 $('#pauseBtn').attr('id','playBtn');
                 autoPlayStop();
             }
             else{
-                $('#playBtn').attr('src','image/pauseBtn.png');
+                $('#playBtn').attr('src','image/slide_pause.png');
                 $('#playBtn').attr('id','pauseBtn');
                 autoPlay();
             }
     });
 
-
-    // slideMenu 클릭시 css 변경
     $('.slideMenu').each(function(index){
 			// 클릭했을 때 현재 인덱스 값을 moveSlide() 함수에게 전달
             $(this).on('click', function(){

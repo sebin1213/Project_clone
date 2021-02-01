@@ -3,13 +3,15 @@
 
 #slideShow {
     width:100%;
-    height:500px;
+    height:380px;
     box-shadow:0 0 3px #ccc;
+    margin: 0 auto;
+    text-align:left;
 }
 
 #slideShowBox {
     width:100vm;
-    height:450px;
+    height:87%;
     text-align:center;
     overflow:hidden;
 }
@@ -18,24 +20,70 @@
 
 #slidePanel {
     position:relative;
-    width:11520px;
-    height:450px;
+    width:800%;
+    height:100%;
+    display:flex;
 }
 
 /* 슬라이드 이미지 */
+.slideSet{
+    width:12.5%;
+    display:flex;
+    width:50%;
+    margin:0;
+    background-color:#373672;
+    color:white;
+}
+.slideSet>div {
+    width:50%;
+}
+.slide_left{
+    text-align:left;
+}
+.slide_left{
+    position:relative;
+    margin-top:5%;
+}
+
+.slideTag{
+    position:relative;
+    margin-left:20%;
+}
+
+.slideTag p{
+    display:inline-block;
+    border-radius:5px;
+    padding:1%;
+    font-size:.8rem;
+    font-weight:bold;
+    margin:0;
+    margin-right:1%;
+}
+
+/* slide Tag 배경색 및 글씨색 지정 */
+#slide_tag01 p{color:black;background-color:#f584ae;}
+#slide_tag02 p{color:#FF2E1E;background-color:white;}
+#slide_tag03 p{color:black;background-color:#57e896;}
+#slide_tag04 p{color:white;background-color:#ff2e1e;}
+#slide_tag05 p{color:#1DC078;background-color:white;}
+#slide_tag06 p{color:white;background-color:#00C471;}
+
+
+
+.slide_left>h1 {font-size:2rem;font-weight:bold;margin:0;margin-left:20%;padding-top:10px;}
+.slide_left>p {font-size:1rem; margin-left:20%;}
+
 .slideImage {
-    float:left;
-    /*width:1430px;*/
-    width:100vw; /*이부분 수정*/
-    height:450px;
+    width:100%;
+    height:100%;
 }
 
 /******************* ControlBox *******************/
 
 #controlBox {
-    width:90%;
+    margin: 0 auto;
+    width: 80%;
     height:30px;
-    margin:0 150px 0;
     padding:10px 0;
     display:flex;
     align-items:center;
@@ -57,18 +105,20 @@
 }
 
 #showIndex {
-    margin-left:5px;
-    font-size:10pt;
+    font-size:1rem;
     color:white;
+    margin-bottom:5px;
 }
 
 #control-wrapper{
-    margin-left:10px;
+    position:relative;
+    left:10%;
 }
 #control-wrapper img {
-    width:15px;
-    height:15px;
+    width:25%;
+    height:25%;
     cursor:pointer;
+    display:inline-block;
 }
 
 #divider {
@@ -81,12 +131,13 @@
 /* slideControlBox */
 
 #slideControlBox{
-    width:70%;
+    width:100%;
     overflow:hidden;
     align-items:center;
 }
 #controlPanel{
-    width:1280px;
+    position:relative;
+    width:500%;
 }
 #controlPanel ul{margin:0;}
 
@@ -100,7 +151,7 @@
 
 .slideTotalMenu li{
     display: inline-block;
-    padding: 0 1rem;
+    padding: 0 15px 0 15px;
     margin: 5px 5px 0 0;
     height: 36px;
     line-height: 36px;
@@ -115,24 +166,24 @@
 }
 
 /* 진행중인 모든 이벤트 보는 버튼 */
-#listBtnBox {
-    width:10%;
-}
+
 #listBtnBox div{
-    width:20px;
-    height:20px;
-    margin-left:10px;
-    padding:5px;
-    padding-top:6px;
+    width:35px;
+    height:35px;
+    background-color:white;
     border:solid 1px #dee2e6;
-    border-radius:80px;
-    box-shadow:0 0 3px #dee2e6;
+    border-radius:50px;
+    box-shadow:0 2px 8px 0 rgb(0 0 0 / 10%);
+    margin-left:10px;
     cursor:pointer;
 }
 #listBtnBox img{
+    position:relative;
     width:15px;
     height:15px;
-    display:center
+    text-align:center;
+    left:30%;
+    top:25%;
 }
 
 /******************* subControl Box *******************/
@@ -141,9 +192,7 @@
     position:absolute;
     right:3%;
     margin-right:5%;
-    padding: 12px 20px 20px 12px;
-    width:700px;
-    height:130px;
+    width:45%;
     border:solid 1px #ccc;
     border-radius:20px;
     box-shadow:0 0 3px gray;
@@ -163,12 +212,14 @@
     align-items:center;
     justify-content: space-between;
     padding:0 20px;
-    font-size:10pt;
+    font-size:1rem;
+    margin:10px;
 }
 
 #closeBox {
     color:gray;
     text-decoration:underline;
+    font-size:1rem;
     cursor:pointer;
 }
 /* subControl 하단 */
