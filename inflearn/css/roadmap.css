@@ -9,8 +9,14 @@
 
 #roadContent div {display:inline-block;}
 
+#roadmap .contents{
+    display:inline-block;
+    width:9.8%;
+    height:350px;
+    vertical-align:top;
+}
 #roadContent .basicBox {
-    width:275px;
+    width:100%;
     vertical-align:top;
     margin-right:5px;
     cursor:pointer;
