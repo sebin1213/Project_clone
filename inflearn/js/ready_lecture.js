@@ -41,7 +41,7 @@ $(function(){
     } // moveSlide function() close
 
     $('#prevBtn02').on('click',function(){
-        $('#nextBtn02').css({'cursor':'pointer','opacity':'1'});
+        $('#nextBtn02').css({'cursor':'pointer','opacity':'0.7'});
         if(movedPage != 0)
             movedPage--;
 
@@ -49,7 +49,7 @@ $(function(){
     }); // prevBtn click close
 
     $('#nextBtn02').on('click',function(){
-        $('#prevBtn02').css({'cursor':'pointer','opacity':'1'});
+        $('#prevBtn02').css({'cursor':'pointer','opacity':'0.7'});
         if(movedPage != length/5-1)
             movedPage++;
 

@@ -29,14 +29,14 @@ $(function(){
     } // moveSlide function() close
 
     $('#prevBtn03').on('click',function(){
-        $('#nextBtn03').css({'cursor':'pointer','opacity':'1'});
+        $('#nextBtn03').css({'cursor':'pointer','opacity':'0.7'});
         if(movedPage != 0)
             movedPage--;
         moveSlide(movedPage);
     }); // prevBtn click close
 
     $('#nextBtn03').on('click',function(){
-        $('#prevBtn03').css({'cursor':'pointer','opacity':'1'});
+        $('#prevBtn03').css({'cursor':'pointer','opacity':'0.7'});
         if(movedPage != length/4-1)
             movedPage++;
         moveSlide(movedPage);
