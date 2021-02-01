@@ -20,7 +20,7 @@ $(function(){
     $('#prev_new_lecture_Btn').on('click',function(){
         if(move_Index == 1.4){
              move_Index = move_Index - 1;
-             move_Index=Math.ceil(move_Index);     /* 대체 왜 1.4에서 1을 빼는데 3.9가 나오는건데.....*/
+             move_Index=move_Index.toFixed(1);  /* 대체 왜 1.4에서 1을 빼는데 3.9가 나오는건데.....*/
              $('#next_new_lecture_Btn').css('background-color','#ffffffc9');
             $('#next_nlec_Btn').css('opacity','1');
              }

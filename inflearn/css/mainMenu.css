@@ -4,12 +4,16 @@
 
 #mainBox{
     margin:0 160px;
-    height:80px;
+    height:70px;
 }
 
 #logoBox{
     float:left;
 }
+#logoImg{
+    width:110px;
+}
+
 .menu-left {
     float:left;
     padding-left:10px;
@@ -27,8 +31,8 @@
     padding:0 10px;
     float:left;
     text-align:center;
-    height:80px;
-    line-height:80px;
+    height:70px;
+    line-height:70px;
 }
 #mainBox img{
     vertical-align:middle;
@@ -36,7 +40,7 @@
 
 .menu-right {
     float:right;
-    height:80px;
+    height:70px;
 }
 .menu-right ul{
     float:right;
@@ -48,13 +52,13 @@
 
 #mainBox ul li a{
     text-decoration:none; /* 밑줄 없애기 */
-    font-size:18px;
+    font-size:16px;
     font-weight:bold;
 }
 
 #login {
     border: 1px solid;
-    padding: 8px;
+    padding: 6px 8px;
     background: #fff;
     color:#616161;
     border-radius: 4px;
@@ -63,7 +67,7 @@
 
 #register {
     border: 1px solid;
-    padding: 8px;
+    padding: 6px 8px;
     color:#fff;
     background: #ff7867;
     border-radius: 4px;
