@@ -46,4 +46,30 @@ $(function(){
             }
     });
 
-})
+    /********************************* search 클릭시 animate **************************************/
+    $("#search input").addClass('blur');
+
+    $("#search input").focus(function(){
+        $('#search').css({
+        'box-shadow':'0px 3px 8px 0px rgb(0 0 0 / 40%)',
+        'transition':'all ease 400ms',
+        'background-color':'white',
+        'border':'1px solid #dedede'
+        });
+        $(this).addClass('focus');
+        $(this).removeClass('blur');
+
+    });
+    $("#search input").blur(function(){
+        $('#search').css({
+        'box-shadow':'0 0px 5px 0 rgb(0 0 0 / 10%)',
+        'transition':'all ease 400ms',
+        'background-color':'rgba(29,192,120,.12)',
+        'border':'1px solid rgba(29,192,120,.24)'
+        });
+        $(this).addClass('blur');
+        $(this).removeClass('focus');
+    });
+
+
+});
