@@ -110,7 +110,7 @@ $(function(){
     function autoPlay(){
         auto=setInterval(function(){
             nextChkPlay();
-        },3000);
+        },5000);
     }
 
     function autoPlayStop(){
