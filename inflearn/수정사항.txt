@@ -1,2 +1,0 @@
-common.css의 #wrap width 100%으로 변경
-hearder 바꿈
