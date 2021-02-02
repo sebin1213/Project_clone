@@ -61,6 +61,21 @@ font-size: 16px;
     padding: .2em .75em;
     text-decoration:none;
 }
+#question{
+    margin: 20px 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3em;
+    padding: .4em .75em;
+    color: #fff;
+    background: #ff7867;
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+}
+#menu-list1{
+    font-weight: bold;
+    color: #00c471;
+}
 
 /*******************column_middle******************/
 #column_middle{
