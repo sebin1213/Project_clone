@@ -13,4 +13,13 @@
     border:solid 1px transparent;
     box-shadow:0 3px 5px 0px #dbdbdb;
 }
-
+#footerBox{
+    background-color: #303740;
+}
+#bottomMenuBox{
+    width:80%;
+    margin: auto;
+}
+#bottomMenuBox img{
+    width:100%;
+}
