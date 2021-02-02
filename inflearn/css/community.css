@@ -119,6 +119,10 @@ height:36px;
     position: relative;
     vertical-align: top;
 }
+.select_menu:hover{
+    border: 1px solid #000000;
+}
+
 #community_search{
     display:inline-block;
     font-size: 1rem;
@@ -155,7 +159,7 @@ height:36px;
     white-space: nowrap;
     align-items: center;
     border: 1px solid transparent;
-    border-radius: 4px;
+    border-radius: 0 4px 4px 0px;
     box-shadow: none;
     line-height: 1.5;
     display: inline-flex;
@@ -171,7 +175,7 @@ height:36px;
     height: 100%;
     vertical-align:middle;
 }
-
+input:focus {outline:none;}
 /***********************************************/
 #column_sidebar_right{
     width: 19%;
@@ -190,3 +194,4 @@ height:36px;
 #column_sidebar_right i{
     color: #fdcc11;
 }
+
