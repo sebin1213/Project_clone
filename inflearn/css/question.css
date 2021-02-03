@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+#modal2{
+		    width: 100vw;
+    		height: 100vh;
+    		background-color: #00000080;
+    		display:none;
+    		z-index: 999;
+    		position: fixed;
+			}
+		#qu_modal{
+    		padding: 0px;
+    		height: 95%;
+    		max-width: 920px;
+    		width: 90%;
+    		position: absolute;
+		    top: 50%;
+		    left: 50%;
+    		transform: translate(-50%, -50%);
+    		background-color: white;
+    		border-radius: 5px;
+    		text-align: center;
+		}
+		#close-button{
+			position: absolute;
+    		right: 15px;
+    		top: 5px;
+		}
+		#qu_title{
+			align-items: center;
+		    background-color: #fff;
+		    display: flex;
+		    flex-shrink: 0;
+		    justify-content: flex-start;
+		    padding: 20px;
+		    position: relative;
+		    border-bottom: 1px solid #dbdbdb;
+
+
+		}
+		#qu_title input{
+			border-radius: 3px;
+    		box-shadow: none;
+    		background-color: #f6f6f6;
+   	 		color: #5f5f5f;
+    		border: 1px solid transparent;
+    		line-height: 1.5;
+		    padding: calc(.375em - 1px) calc(.625em - 1px);
+		    position: relative;
+		    vertical-align: top;
+		    width: 100%;
+		    font-size: 1rem;
+		}
+		#qu_text_box{
+			flex-grow: 1;
+		    flex-shrink: 1;
+		    overflow: auto;
+		    padding: 20px;
+		    height: calc(100% - 184.4px);
+		}
+		#qu_text{
+			width: 100%;
+			height: calc(100% - 2px);
+    		border: 1px solid #ccc;
+		}
+		#qu_textarea{
+			padding: 20px;
+			width: calc(100% - 40px);
+    		height: calc(100% - 40px);
+    		resize: none;
+    		outline: none;
+    		border: none;
+		}
+
+		#qu_but{
+			align-items: center;
+    background-color: #fff;
+    display: flex;
+    padding: 20px;
+    position: relative;
+		}
+		#qu_but button{
+    border-color: #dbdbdb;
+    border-width: 1px;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: none;
+    display: inline-flex;
+    font-size: 1rem
+    color: #363636;
+    cursor: pointer;
+    padding: calc(.375em - 1px) .75em;
+    text-align: center;
+    margin-right: 10px;
+		}
+		#save_button{
+			background-color: #1dc078;
+    		border-color: transparent;
+    		color: #fff;
+		}
