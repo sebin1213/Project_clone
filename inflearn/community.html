@@ -26,12 +26,14 @@
 				            <span id="close-button">&times;</span>
 							<img src="image/logo.png" id="login_logo">
 						</div>
-						<div id="login_user">
-							<input id="login_email" type="text" placeholder="이메일">
-							<input id="login_pw" type="password" placeholder="비밀번호">
+						<form method="POST" action="" name="login_info">
+							<div id="login_user">
+								<input id="login_email" type="text" placeholder="이메일" required>
+								<input id="login_pw" type="password" placeholder="비밀번호" required>
 
-							<input id="login_button" type="button" value ="로그인">
-						</div>
+								<input id="login_button" type="submit" value ="로그인">
+							</div>
+					</form>
 						<div class="pw_menu">
 							<h4>비밀번호를 잊어버리셨나요?</h4>
 							<a href="#">비밀번호찾기</a>
@@ -56,7 +58,7 @@
 <div id="modal2">
 					<div id="qu_modal">
 						<div id="qu_header">
-							<span>질문 작성</span>
+							<span id="q_question">Q.</span><span id="q_header_title"> 질문 작성</span>
 						</div>
 						<div id="qu_title">
 							<input type="text" placeholder="제목을 입력해주세요">

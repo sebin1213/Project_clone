@@ -8,6 +8,7 @@
     		z-index: 999;
     		position: fixed;
 			}
+
 		#qu_modal{
     		padding: 0px;
     		height: 95%;
@@ -25,10 +26,15 @@
             padding: 20px;
             border-bottom: 1px solid #ccc;
 		}
-		#qu_header span{
+		#q_header_title{
 		    font-size: 1em;
             font-weight: bold;
             color:rgb(97, 97, 97);
+		}
+		#q_question{
+		    color:#1dc078;
+		    font-weight: bold;
+            font-size: 1.2em;
 		}
 		#qu_title{
 			align-items: center;
@@ -60,7 +66,7 @@
 		    flex-shrink: 1;
 		    overflow: auto;
 		    padding: 20px 20px 0px 20px;
-		    height: calc(100% - 247px);
+		    height: calc(100% - 251px);
 		}
 		#qu_text{
 			width: 100%;
