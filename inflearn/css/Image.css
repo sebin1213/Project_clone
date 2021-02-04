@@ -1,12 +1,7 @@
 @charset "UTF-8";
 /* Image.css */
 
-* {
-  margin: 0px;
-  padding: 0px;
-}
-
-ul,
+.header h3{margin:0;}
 ol,
 li {
   list-style: none;
