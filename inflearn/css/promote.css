@@ -59,6 +59,7 @@
     border: 1px solid #bcbcbc;
     padding:10px;
     border-radius:8px;
+    background-color:#FAFAFA;
     }
 
 .review_scroll + .review_scroll{
