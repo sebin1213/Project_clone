@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+
+#communityBox {
+    background-color:#FAFAFA;
+    text-align:initial;
+    height:350px;
+    }
+
+#communityMainBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.communitySubBox{
+    width:20%;
+    margin-top:80px;
+    }
+
+.subtext_5 {
+    margin-bottom:13px;
+    font-size:x-large;
+
+    }
+
+.communityText_1{
+    margin-bottom:26px;
+    }
+
+.communityBox_herf_button {
+    background-color:#1dc078;
+    color:#fff;
+    width:30%;
+    height:45px;
+    font-weight:bolder;
+    border:0px;
+    cursor:pointer;
+    font-size:medium;
+    }

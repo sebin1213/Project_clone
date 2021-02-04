@@ -2,7 +2,7 @@
 /* Box.css */
 
 .Box {
-    background-color:#eeeeee;
+    background-color:#FAFAFA;
     text-align:initial;
     }
 
@@ -13,58 +13,73 @@
     }
 
 .header {
-    width:60%;
+    width:51%;
     height:80px;
+    margin-top:50px;
     }
 
 .mainBox {
-    background-color:#eeeeee;
-    margin-top:30px;
+    background-color:#FAFAFA;
     display: flex;
     justify-content: center;
     align-items: center;
     }
 
 #Box_1 {
-    width: 16%;
-    height: 250px;
-    padding: 30px;
+    width: 12%;
+    height: 100%;
+    padding: 50px;
     border: 1px solid #bcbcbc;
     background-color:#ffffff;
     display:inline-block;
-    margin-bottom:20px;
+    margin-bottom:50px;
     }
 
 #Box_2 {
-    width: 16%;
-    height: 250px;
-    padding: 30px;
+    width: 12%;
+    height: 100%;
+    padding: 50px;
     border: 1px solid #bcbcbc;
     background-color:#ffffff;
     display:inline-block;
     margin-left:20px;
     margin-right:20px;
-    margin-bottom:20px;
+    margin-bottom:50px;
     }
 
 #Box_3 {
-    width: 16%;
-    height: 250px;
-    padding: 30px;
+    width: 12%;
+    height: 100%;
+    padding: 50px;
     border: 1px solid #bcbcbc;
     background-color:#ffffff;
     display:inline-block;
-    margin-bottom:20px;
+    margin-bottom:50px;
     }
 
 .mainBox_href_button {
-    background-color:#00ff83;
+    background-color:#1dc078;
     color:#fff;
-    width:170px;
+    width:70%;
     border-radius:20px;
-    height:30px;
+    height:35px;
     font-weight:bolder;
+    font-size:medium;
     border:0px;
-    margin-top:50px;
+    margin-top:60px;
     cursor:pointer;
+    }
+
+.subtext_1{
+    margin-bottom:10px;
+    }
+
+.text_1 {
+    color:#6E6E6E;
+    }
+
+.text_2 {
+    margin-bottom:5px;
+    font-size:x-large;
+    font-weight:bolder;
     }

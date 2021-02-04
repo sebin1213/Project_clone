@@ -1,17 +1,92 @@
 @charset "UTF-8";
 /* Image.css */
 
+* {
+  margin: 0px;
+  padding: 0px;
+}
 
-.Image{
-    width:80%;
-    margin-left:200px;
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+  border: none;
+}
+
+.slide {
+    width: 80%;
+    position: relative;
+    padding-top: 50px;
+    overflow: hidden;
     margin-bottom:25px;
-
     text-align:initial;
-    }
+    margin-left: 10%;
+    text-align:initial;
+}
 
-.subImageBox {
-    padding:20px;
+.panel {
+  width: 300%;
+}
+
+.panel:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.panel>li {
+  width: 33.3%;
+  height: 200px;
+  float: left;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+
+.dot:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.dot {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+}
+
+.dot>li {
+  float: left;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+.dot>li.on {
+  background-color: #342f2f;
+}
+.subtext_2{
+    padding:30px;
+    margin-left:16%;
+
+    }
+.subtext_4{
+    padding:30px;
+    margin-left:16%;
     color:#ffffff;
     }
 
@@ -19,6 +94,16 @@
     background-color:#ffffff;
     color:#32CD32;
     border-radius:5px;
+    width:9%;
     height:40px;
     cursor:pointer;
+    margin-left:18%;
+    border:0px;
+    font-size:medium;
+    font-weight:bolder;
+    border-radius:5px;
+    }
+.mainImageBox{
+    width:100%;
+    height:208px;
     }
