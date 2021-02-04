@@ -3,25 +3,28 @@
 
 .Promote {
     display: flex;
-    justify-content: center;
     align-items: center;
     margin-bottom:5px;
     text-align:initial;
+    width:89%;
     }
 
 .promote_1 {
     margin-bottom:15px;
-    font-size:xx-large;
+    font-size:xxx-large;
     font-weight:bolder;
 
     }
+.promote_2 {
+    font-size:large;
+    }
 
 .mainPromote {
-    width:25%;
+    width:60%;
     height:250px;
-    padding:15px;
-    margin-right:2%;
-    margin-left:10%;
+    margin-right:5%;
+    margin-left:12%;
+    margin-bottom:7%;
     }
 
 .name {
@@ -51,11 +54,12 @@
     margin-top:5%;
     padding:5px;
     cursor:pointer;
+    margin-bottom:10%;
     }
 
 .review_scroll {
-    width:80%;
-    height:80%;
+    width:100%;
+    height:100%;
     border: 1px solid #bcbcbc;
     padding:10px;
     margin-bottom:20px;

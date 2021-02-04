@@ -4,69 +4,83 @@
 .Box {
     background-color:#FAFAFA;
     text-align:initial;
+
+    }
+
+#mainHeaderBox {
+    width:80%;
+    height:600px;
+    background-color:#FAFAFA;
     }
 
 .mainHeader {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom:20px;
     }
 
 .header {
-    width:51%;
+    width:75%;
     height:80px;
-    margin-top:50px;
+    margin-top:20px;
+
     }
 
 .mainBox {
+    width:130%;
     background-color:#FAFAFA;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
     }
 
 #Box_1 {
-    width: 12%;
-    height: 100%;
+    margin-left:10%;
+    width: 19.5%;
+    height: 300px;
     padding: 50px;
     border: 1px solid #bcbcbc;
     background-color:#ffffff;
     display:inline-block;
     margin-bottom:50px;
+    overflow:hidden;
     }
 
 #Box_2 {
-    width: 12%;
-    height: 100%;
+    width: 19.5%;
+    height: 300px;
     padding: 50px;
     border: 1px solid #bcbcbc;
     background-color:#ffffff;
     display:inline-block;
-    margin-left:20px;
-    margin-right:20px;
+    margin-left:1%;
+    margin-right:1%;
     margin-bottom:50px;
+    overflow:hidden;
     }
 
 #Box_3 {
-    width: 12%;
-    height: 100%;
+    width: 19.5%;
+    height: 300px;
     padding: 50px;
     border: 1px solid #bcbcbc;
     background-color:#ffffff;
     display:inline-block;
     margin-bottom:50px;
+    overflow:hidden;
+
     }
 
 .mainBox_href_button {
     background-color:#1dc078;
     color:#fff;
-    width:70%;
+    padding:10px;
     border-radius:20px;
     height:35px;
     font-weight:bolder;
     font-size:medium;
     border:0px;
-    margin-top:60px;
+    margin-top:10%;
     cursor:pointer;
     }
 
