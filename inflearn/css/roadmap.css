@@ -29,8 +29,8 @@
 #prevBtn03 {
     z-index: 20;
     position: absolute;
-    top: 30%;
-    left: 8%;
+    top: calc(50% + 20px);
+    left: -2%;
     float: left;
     width: 35px;
     height: 35px;
@@ -45,8 +45,8 @@
 #nextBtn03 {
     z-index: 20;
     position: absolute;
-    top: 30%;
-    right: 8%;
+    top: calc(50% + 20px);
+    right: -2%;
     float: right;
     width: 35px;
     height: 35px;

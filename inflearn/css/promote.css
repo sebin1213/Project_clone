@@ -62,7 +62,11 @@
     height:100%;
     border: 1px solid #bcbcbc;
     padding:10px;
-    margin-bottom:20px;
     border-radius:8px;
     background-color:#FAFAFA;
     }
+
+.review_scroll + .review_scroll{
+
+    margin-top:20px;
+}

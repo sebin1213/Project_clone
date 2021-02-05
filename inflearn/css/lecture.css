@@ -10,8 +10,11 @@
      margin: 0 auto;
      width: 80%;
      text-align:left;
-     overflow:hidden;
      height:100%;
+     position:relative;
+}
+#articleContent_hidden{
+    overflow:hidden;
 }
 
 .articleContent .starPoint img{
@@ -64,6 +67,7 @@
 .articleContent{
     position:relative;
     width:250%;
+    overflow:hidden;
 }
 
 .articleContent .contents{
