@@ -25,6 +25,8 @@ $(document).ready(function(){
                         m_display='block';
                         r_display='block';
                         k_display='inline-block';
+                        inquire='block';
+                        b_menu='none';
                         }
                     else if($winWidth <=1408 && $winWidth>1149){
                         s_display='none';
@@ -33,6 +35,8 @@ $(document).ready(function(){
                         m_display='block';
                         r_display='block';
                         k_display='inline-block';
+                        inquire='block';
+                        b_menu='none';
                         }
                     else if($winWidth <=1149 && $winWidth>1017){
                         s_display='none';
@@ -41,6 +45,8 @@ $(document).ready(function(){
                         m_display='block';
                         r_display='block';
                         k_display='none';
+                        inquire='block';
+                        b_menu='none';
                         }
                     else{
                         s_display='none';
@@ -49,6 +55,8 @@ $(document).ready(function(){
                         m_display='initial';
                         r_display='none';
                         k_display='none';
+                        inquire='none';
+                        b_menu='block';
                     }
 
                     $('#search_input').css('display',s_display);
@@ -57,5 +65,7 @@ $(document).ready(function(){
                     $('#logoBox').css('float',l_float);
                     $('.menu-right').css('display',r_display);
                     $('#knowledge').css('display',k_display);
+                    $('#inquire').css('display',inquire);
+                    $('#bottom_menu_area').css('display',b_menu);
                 };
             });//ready

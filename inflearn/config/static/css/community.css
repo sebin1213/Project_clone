@@ -228,6 +228,8 @@ input:focus {outline:none;}
     border-radius: 4px;
 }
 #community_page_number li a{
+
+    text-decoration:none;
     color: #363636;
     padding: 3px;
     text-align: center;

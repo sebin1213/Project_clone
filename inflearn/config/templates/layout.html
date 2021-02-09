@@ -219,6 +219,16 @@
 					</div> <!-- footer info 끝-->
 				</div>
 			</footer>
+			<div id="bottom_menu_area">
+				<div id="small_bottom_menu">
+					<div><img src="{% static 'image/notification.png' %}">알림</div>
+					<div><img src="{% static 'image/list.png' %}">목록</div>
+					<div><a href="{% url 'index' %}"><img src="{% static 'image/home.png' %}">홈</a></div>
+					<div><a href="{% url 'combot:index' %}"><img src="{% static 'image/chat-bubble-b.png' %}">커뮤니티</a></div>
+					<div><img src="{% static 'image/user_m.png' %}">정보</div>
+				</div>
+			</div>
+
 		</div> <!-- wrap 끝 -->
 	</body>
 </html>
