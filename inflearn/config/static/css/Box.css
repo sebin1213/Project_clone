@@ -9,6 +9,8 @@
 
 #mainHeaderBox {
     width:80%;
+    text-align: center;
+    margin: 0 auto;
     height:600px;
     background-color:#FAFAFA;
     }
@@ -18,6 +20,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom:20px;
+    text-align: initial;
     }
 
 .header {
@@ -28,14 +31,13 @@
     }
 
 .mainBox {
-    width:130%;
+    width:100%;
     background-color:#FAFAFA;
 
 
     }
 
 #Box_1 {
-    margin-left:10%;
     width: 19.5%;
     height: 300px;
     padding: 50px;
