@@ -7,7 +7,11 @@
     		display:none;
     		z-index: 999;
     		position: fixed;
+    		top: 0;
 			}
+#qu_modal form{
+    height:100%;
+}
 
 		#qu_modal{
     		padding: 0px;
