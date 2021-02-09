@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth import authenticate,login #로그인 기능을 하는 패키지 함수
@@ -8,24 +9,37 @@ from .forms import SignupForm, LoginForm #forms.py를 생성해서 SignupForm, L
 
 
 def signup(request):
+    res_data = {} # 에러메시지용
+    flag=0 # 이메일 또는 비밀번호 에러 구분자
     if request.method == 'POST':
+        name = request.POST['username']
+        re_name = request.POST['re_username']
+        pwd = request.POST['password1']
+        re_pwd = request.POST['password2']
+
         form = SignupForm(request.POST)
-        if form.is_valid():
+        if name != re_name:
+            res_data[0] = "이메일이(가) 일치하지 않습니다."
+        if pwd != re_pwd:
+            res_data[1] = "비밀번호이(가) 일치하지 않습니다."
+
+        elif form.is_valid():
             user=form.save()
             login(request, user)
             return redirect('/')
+
     else:
         form = SignupForm()
-    return render(request, 'accounts/signup.html',{'form':form,})
+    return render(request, 'accounts/signup.html',{'form':form,'error':res_data})
 
 
 def login_check(request):
-    if request.method== "POST":
-        form=LoginForm(request.POST)
-        name=request.POST['username']
-        pwd=request.POST['password']
+    if request.method == "POST":
+        form = LoginForm(request.POST)
+        name = request.POST['username']
+        pwd = request.POST['password']
 
-        user=authenticate(username=name, password=pwd)
+        user = authenticate(username=name, password=pwd)
 
         if user is not None:
             login(request, user)

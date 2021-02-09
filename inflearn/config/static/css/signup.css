@@ -95,11 +95,28 @@
     color: #fff;
 }
 
-#section_sign p{
+#signup_agree{
     width: 340px;
     margin: 0 auto;
     text-align: initial;
     margin-top: 10px;
     font-size: 10px;
     color:#797979;
+}
+
+/* form test 영역 - 제대로 적용됨 */
+.signup_error{
+    position:absolute;
+    font-size: .5rem;
+    color: #ff7867;
+    font-weight: bold;
+}
+
+#name_error{
+    top: 45%;
+    left: 35%;
+}
+#pwd_error{
+    top: 71%;
+    left: 34%;
 }
