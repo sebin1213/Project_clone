@@ -1,0 +1,238 @@
+{% extends "combot/layout.html" %}
+
+
+{% block content %}
+{% load static %}
+			<section id="community_header">
+                <div id="community_container">
+                    <h2>묻고 답해요.</h2>
+                    <p>40만명이 함께하는 인프런 커뮤니티 <br>
+                    모르면 묻고, 해답을 찾아보세요. </p>
+                </div>
+            </section>
+
+			<!--column_hearder끝---------------->
+			<section id="community_main">
+				<div id="community_columns">
+					<aside id="column_sidebar_left">
+						<div id="column_menu">
+							<p class="menu-label">함께 공부해요</p>
+							<ul class="menu-list">
+								<li><a href="#" id="menu-list1"><img src='{% static "image/chat-bubble.png" %}'> 묻고 답하기</a></li>
+								<li><a href="#"><img src='{% static "image/star-gray.png" %}'> 수강평 모아보기</a></li>
+								<li><a href="#"><img src='{% static "image/quill.png" %}'> 글 모아보기</a></li>
+							</ul>
+
+							<p class="menu-label">인프런</p>
+							<ul class="menu-list">
+								<li><a href="#"><img src='{% static "image/poetry-gray.png" %}'> 인프런 블로그</a></li>
+								<li><a href="#"><img src='{% static "image/megaphone.png" %}'> 인프런 공지사항</a></li>
+								<li><a href="#"><img src='{% static "image/chat.png" %}'> 강의기능요청</a></li>
+								<li><a href="#"><img src='{% static "image/quill.png" %}'> 인프런 소개</a></li>
+								{% if user.is_authenticated %}
+								<li><a href="#" id="community_question">질문 작성</a></li>
+								{% else %}
+
+								{% endif %}
+
+							</ul>
+						</div>
+
+					</aside>
+
+					<div id="column_middle">
+						<div id="column_middle_pad">
+							<div id="column_middle_box">
+								<div id="community_control">
+									<div class="control_order">
+										<div class="select_box">
+											<select class="select_menu">
+												<option value>해결/미해결</option>
+												<option value="not_resolved">미해결 질문</option>
+												<option value="resolved">해결 질문</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="control_order">
+										<div class="select_box">
+											<select class="select_menu">
+												<option value="recent">최신순</option>
+												<option value="comment_recent">최근답변순</option>
+												<option value="comment">미 답변순</option>
+												<option value="recommend">추천순</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div id="community_search">
+									<div id="community_search_box">
+										<input type="text">
+										<p id="community_search_but">검색</p>
+									</div>
+								</div>
+							</div>
+							<!---column_middle_box 끝 (select, 검색창)---------------->
+							<div id="community_list_box">
+								{% if question_list %}
+								<ul id="community_list">
+									{% for question in question_list %}
+									<li class="community_post">
+										<div class="community_post_left">
+											<div class="community_title"><span class="q_post">Q.</span><a href="{% url 'combot:community_post' question.id %}">{{question.subject}}</a></div>
+											<div class="community_mata"><span class="author">글쓴이: {{question.user}}</span><span class="updated_at">시간: {{question.create_date}}</span></div>
+										</div>
+										<div class="community_post_right">
+											<div class="comment_state">
+												{% if question.answer_set.count > 0 %}
+												답변 {{question.answer_set.count}}개
+												{% else %}
+												미답변
+												{% endif %}
+											</div>
+											<div class="recommended">❤0</div>
+											<a href="{% url 'combot:community_post' question.id %}" class="question_btn">질문으로 가기</a>
+										</div>
+									</li><!--community_post끝-->
+									{% endfor %}
+								</ul>
+								{% else %}
+								<p>질문이 없습니다.</p>
+							{% endif %}
+							</div>
+
+							<ul id="community_page_number">
+								<!-- 이전페이지 출력-->
+								{% if question_list.has_previous %}
+								<li class="page-item">
+									<a class="page-link" href="?page={{ question_list.previous_page_number }}">이전</a>
+								</li>
+								<!-- ?page={{ question_list.previous_page_number }} : ? 변수=값 page=1 -->
+								{% else %} <!-- 이전페이지가 없는 경우 -->
+								<li class="page-item disabled">
+									<a class="page-link" tabindex="-1" aria-disabled="true" href="#">이전</a>
+								</li>
+								{% endif %}
+
+								<!-- 페이지리스트 -->
+								{% for page_number in question_list.paginator.page_range %} <!-- 총 페이지 번호만큼 for loop 실행 -->
+								{% if page_number >= question_list.number|add:-5 and page_number <= question_list.number|add:5 %}
+								<!-- 새로 구성될 페이지 번호가 현재페이지 기준으로 크면 5만큼 작은 값만 표시, 현재 페이지 기준으로 작으면 5만큼 큰 값만 표시 -->
+									{% if page_number == question_list.number %} <!-- 마지막 페이지 인지 여부 -->
+									<li class="page-item active" aria-current="page">
+										<a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+									</li>
+									{% else %}
+									<li class="page-item">
+										<a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+									</li>
+									{% endif %}
+								{% endif %}
+								{% endfor %}
+
+								{% if question_list.has_next %}
+									<li class="page-item">
+										<a class="page-link" href="?page={{ question_list.next_page_number }}">다음</a>
+									</li>
+									{% else %}
+									<li class="page-item disabled">
+										<a class="page-link" tabindex="-1" aria-disabled="true" href="#">다음</a>
+									</li>
+								{% endif %}
+							</ul>
+						</div>
+					</div>
+					<!--column_middle끝---------------->
+
+					<aside id="column_sidebar_right">
+						<div id="column_right_pad">
+						<h5>감사한 분들👑</h5>
+						<div id="column_people">
+							<ul>
+								<li>
+									<div class="column_people_list">
+										<div class="column_people_profile">
+											<img src='{% static "image/user.png" %}'>
+										</div>
+										<div class="column_people_name">
+											<p>
+												<a href="#">이름</a>
+											</p>
+										</div>
+									</div>
+								</li>
+
+								<li>
+									<div class="column_people_list">
+										<div class="column_people_profile">
+											<img src='{% static "image/user.png" %}'>
+										</div>
+										<div class="column_people_name">
+											<p>
+												<a href="#">이름</a>
+											</p>
+										</div>
+									</div>
+								</li>
+
+
+								<!-- li 추가 -->
+
+							</ul>
+						</div><!-- 감사한분들 끝 -->
+						</div>
+					</aside>
+
+				</div>
+			</section>
+<!--			community_main끝        -->
+			<section>
+				<div id="communityBox">
+					<center>
+					<div id="communityMainBox">
+						<div class="communitySubBox">
+							<div class="subtext_5">지식 공유자 되기</div>
+							<div class="communityText_1">많은 사람들에게 배움을 주고,<br> 경제적 보상을 받아가세요. </div>
+							<button onclick="window.location href=#" class="communityBox_herf_button"><span class="communityBox_herf_button_1">지식공유 참여 </span></button>
+						</div>
+						<div class="communitySubBox">
+							<div class="subtext_5">기업 교육을 위한 인프런</div>
+							<div class="communityText_1">"인프런 비즈니스"를 통해 모든 팀원이 인프런의 강의들을 자유롭게 학습하는 환경을 제공하세요. </div>
+							<button onclick="window.location href=#" class="communityBox_herf_button"><span class="communityBox_herf_button_1">인프런 비즈니스 </span></button>
+						</div>
+					</div>
+					</center>
+				</div>
+			</section>
+<!---------------------------------question(질문작성 버튼)---------------------------->
+
+<div id="modal2">
+					<div id="qu_modal">
+						<form method="POST" action="{% url 'combot:question_create' %}">
+							{% csrf_token %}
+							<!--\{\{form.as_p\}\}-->
+							<div id="qu_header">
+								<span id="q_question">Q.</span><span id="q_header_title"> 질문 작성</span>
+							</div>
+							<div id="qu_title">
+								<input name="subject" type="text" placeholder="제목을 입력해주세요" required>
+							</div>
+
+							<div id="qu_text_box">
+								<div id="qu_text">
+								<textarea id="qu_textarea" name="content" placeholder="강의와 관련있는 질문을 남겨주세요.
+• 강의와 관련이 없는 질문은 지식공유자가 답변하지 않을 수 있습니다. (사적 상담, 컨설팅, 과제 풀이 등)
+• 질문을 남기기 전, 비슷한 내용을 질문한 수강생이 있는지 먼저 검색을 해주세요. (중복 질문을 자제해주세요.)
+• 서비스 운영 관련 질문은 인프런 우측 하단 ‘문의하기’를 이용해주세요. (영상 재생 문제, 사이트 버그, 강의 환불 등)" required></textarea>
+								</div>
+							</div>
+
+							<div id="qu_but">
+								<button id="cls_button">취소</button><button id="save_button" type="submit">저장</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+
+{% endblock %}

@@ -21,11 +21,11 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'css/promote.css' %}">
 		<link rel="stylesheet" type="text/css" href="{% static 'css/image.css' %}">
 		<link rel="stylesheet" type="text/css" href="{% static 'css/Box.css' %}">
-		<link rel="stylesheet" type="text/css" href="css/community.css">
-		<link rel="stylesheet" type="text/css" href="css/community_postlist.css">
-		<link rel="stylesheet" type="text/css" href="css/community_post.css">
-		<link rel="stylesheet" type="text/css" href="css/question.css">
-		<link rel="stylesheet" type="text/css" href="css/communityBox.css">
+		<link rel="stylesheet" type="text/css" href='{% static "css/community_post.css" %}'>
+		<link rel="stylesheet" type="text/css" href='{% static "css/community.css" %}'>
+		<link rel="stylesheet" type="text/css" href='{% static "css/question.css" %}'>
+		<link rel="stylesheet" type="text/css" href='{% static "css/communityBox.css" %}'>
+		<link rel="stylesheet" type="text/css" href='{% static "css/community_postlist.css" %}'>
 
 		<script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
 		<script src="{% static 'js/subMenu.js' %}"></script>
@@ -39,6 +39,8 @@
 		<script src="{% static 'js/slide_size.js' %}"></script>
 		<script src="{% static 'js/search_menu.js' %}"></script>
 		<script src="{% static 'js/image.js' %}"></script>
+		<script src='{% static "js/community.js" %}'></script>
+		<script src='{% static "js/textarea.js" %}'></script>
 		<script type="text/javascript">
 
         </script>
@@ -88,7 +90,7 @@
 										<ul>
 											<li id="mainMenu1"><a href="#">강의들<img src="{% static 'image/down-arrow-green.png' %}"></a></li>
 											<li id="mainMenu2"><a href="#">로드맵</a></li>
-											<li id="mainMenu3"><a href="community.html">커뮤니티<img src="{% static 'image/down-arrow-green.png' %}"></a></li>
+											<li id="mainMenu3"><a href="{% url 'combot:index' %}">커뮤니티<img src="{% static 'image/down-arrow-green.png' %}"></a></li>
 										</ul>
 									</div>
 							</div> <!-- mainMenuBox 끝 -->

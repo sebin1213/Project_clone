@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'), # 메인 화면
     path('accounts/', include('accounts.urls')),
+    path('combot/',include('combot.urls')),
     ]

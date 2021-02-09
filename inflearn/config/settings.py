@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # 'allauth.account',
     'main',
     'accounts',
+    'combot',
 ]
 
 MIDDLEWARE = [
