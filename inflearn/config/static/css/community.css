@@ -81,7 +81,6 @@ font-size: 16px;
 #column_middle{
     width:65%;
     display: inline-block;
-    float:left;
 }
 #column_middle_pad{
     padding: .75rem;
@@ -209,4 +208,20 @@ input:focus {outline:none;}
 #column_sidebar_right i{
     color: #fdcc11;
 }
-
+#community_page_number{
+    margin-top:40px;
+}
+#community_page_number li{
+    display: inline-block;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+}
+#community_page_number li a{
+    color: #363636;
+    padding: 3px;
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: bold;
+    min-width: 1.25em;
+    display: block
+}

@@ -141,6 +141,32 @@ left: 20px;
     min-height: 100px;
     line-height: 1.5;
 }
+#answer_list li{
+    width: 70%;
+    position: relative;
+    top: -21px;
+    text-align: initial;
+    padding: 1rem;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+    display: inline-block;
+    left: 64px;
+}
+.answer_list_class + .answer_list_class{
+    border-bottom:1px solid #cfcfcf;
+}
+.answer_list_profile{
+    left: 20px;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: 10px;
+}
+.answer_list_profile img{
+    width: 32px;
+    height: 32px;
+    border-radius: 40000px;
+}
 
 #community_post_answer_box input{
     display: block;
@@ -167,4 +193,8 @@ left: 20px;
 }
 .recommended_num{
     color:#ff7867;
+}
+.answer_author_header{
+font-size: 12px;
+padding-bottom: 10px;
 }
