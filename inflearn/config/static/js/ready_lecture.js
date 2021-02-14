@@ -11,7 +11,7 @@ $(function(){
     $('#nextBtn02').css({'cursor':'pointer'});
 
     /*** Hover Effect ***/
-    $('.prevNextButtonBox02 div').hover(
+    $('.btnShape').hover(
         function(){
             $(this).css({'box-shadow':'0 2px 8px 0 rgb(0 0 0 / 40%)','transition':'all ease 400ms'});
         },

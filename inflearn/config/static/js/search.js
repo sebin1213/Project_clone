@@ -50,7 +50,7 @@ $(function(){
     $("#search input").addClass('blur');
 
     $("#search input").focus(function(){
-        $('#search').css({
+        $('#search' ).css({
         'box-shadow':'0px 3px 8px 0px rgb(0 0 0 / 40%)',
         'transition':'all ease 400ms',
         'background-color':'white',
