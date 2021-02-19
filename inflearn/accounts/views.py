@@ -10,7 +10,7 @@ from .forms import SignupForm, LoginForm #forms.py를 생성해서 SignupForm, L
 
 def signup(request):
     res_data = {} # 에러메시지용
-    flag=0 # 이메일 또는 비밀번호 에러 구분자
+
     if request.method == 'POST':
         name = request.POST['username']
         re_name = request.POST['re_username']
@@ -18,11 +18,13 @@ def signup(request):
         re_pwd = request.POST['password2']
 
         form = SignupForm(request.POST)
+        # 에러 메시지 저장
         if name != re_name:
             res_data[0] = "이메일이(가) 일치하지 않습니다."
         if pwd != re_pwd:
             res_data[1] = "비밀번호이(가) 일치하지 않습니다."
 
+        # 에러 없으면 회원가입 성공 및 로그인
         elif form.is_valid():
             user=form.save()
             login(request, user)
