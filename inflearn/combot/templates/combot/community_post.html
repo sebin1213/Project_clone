@@ -19,7 +19,10 @@
                         <div id="community_post_content">
                             <div id="community_post_content_meta">
                                 <span id="post_author_title">작성자 : </span><span id="post_author">{{question.user}}</span>&nbsp;&nbsp;<span id="post_time">{{question.create_date}}</span>
-                            </div>
+                                {% if request.user == question.user %}
+                                <a href="{% url 'combot:question_delete' question.id %}" id="community_post_delete">❌</a>
+                                {% endif %}
+			    </div>
                             <textarea id="community_post_textarea" readonly>{{question.content}}</textarea>
                             <div id="recommended_area">
 								<span>이 내용이 도움이 되었나요? </span><span class="recommended_num">❤</span><span class="recommended_num" id="recommended_num">0</span>
