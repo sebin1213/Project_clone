@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '@2_ew1+g-ny&+h^i$te=*-9pzh3r6otu@a2h^f@ygpsgfl8&bp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['1213hope.pythonanywhere.com']
 
 
 # Application definition
@@ -125,9 +125,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS=[
-    os.path.join(BASE_DIR, 'config','static')
-]
+STATIC_ROOT = os.path.join(BASE_DIR, "web_staticfiles")
+# STATICFILES_DIRS=[
+#     os.path.join(BASE_DIR, 'config','static')
+# ]
 
 
 # login 시 강제 페이지 이동경로
