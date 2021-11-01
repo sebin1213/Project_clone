@@ -25,7 +25,7 @@ SECRET_KEY = '@2_ew1+g-ny&+h^i$te=*-9pzh3r6otu@a2h^f@ygpsgfl8&bp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['1213hope.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
