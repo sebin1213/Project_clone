@@ -58,3 +58,12 @@ def question_create(request):
     return render(request, 'combot/community.html', context)
 
 
+
+
+def question_delete(request,question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    if request.user != question.user:
+        messages.error(request, '삭제권한이 없습니다')
+        return redirect('combot:community_post', question_id=question.id)
+    question.delete()
+    return redirect('combot:index')
