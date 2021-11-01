@@ -1,5 +1,8 @@
 @charset "UTF-8";
-
+#community_post_delete{
+    float:right;
+    text-decoration: none;
+}
 #community_post_container{
     width:80%;
     margin: 0 auto;
